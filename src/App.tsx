@@ -15,6 +15,8 @@ export default App;
 
 /* 
 
+Checking
+
 REACT E-COMMERCE:
 
 https://www.youtube.com/watch?v=-edmQKcOW8s&list=PLnHJACx3NwAe5XQDk9xLgym7FF8Q4FYW7&index=8&ab_channel=CodingAddict
