@@ -1,0 +1,13 @@
+.main-footer{
+        background-color: #2b3175;
+        align-items: center;
+        text-align: center;
+        height:80px;
+        margin-top: 780px;
+}
+
+.images{
+    align-items: center;
+    text-align: center;
+    padding:2px;
+}
