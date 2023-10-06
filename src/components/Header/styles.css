@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2b3175;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    height:80px;
+}
+
+.menu-list {
+    display: flex;
+    list-style-type: none;
+    color: white;
+}
+
+.menu-list li {
+    padding: 5%;
+}
+
+.cartImg {
+    background-color:white;
+    width: 50px;
+    padding:5px;
+    border-radius: 50%;
+}
