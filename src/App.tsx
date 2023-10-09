@@ -1,8 +1,38 @@
 import './App.css';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { MainContext } from './components/context';
+import { useState, useEffect } from 'react';
+
+type prod = {
+  id?:number,
+  title?:string,
+  price?:number,
+  description?:string,
+  category?:string,
+  image?:string,
+  rating?:{
+    rate:string,
+    count:number
+  }
+}
+
+/* fetch('https://fakestoreapi.com/products')
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+ */
+
+
 
 function App() {
+  let test:prod = {id:5,title:"Hi Barbie"}
+  
+  const [productsList, setProdList] = useState<prod[]>([test,test]);
+
+  useEffect(()=>{
+    console.log("Hello there!")
+  },[]);
+
   return (
     <div className="App">
       <Header/>
@@ -50,6 +80,8 @@ Contact:
 Cart:
 - Message if empty
 - Products to buy
+
+
 
 
 */
