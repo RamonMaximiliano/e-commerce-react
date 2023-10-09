@@ -1,43 +1,47 @@
-import './App.css';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { MainContext } from './components/context';
-import { useState, useEffect } from 'react';
+import "./App.css";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import MyContext from "./components/context";
+import { useState, useEffect } from "react";
 
-type prod = {
-  id?:number,
-  title?:string,
-  price?:number,
-  description?:string,
-  category?:string,
-  image?:string,
-  rating?:{
-    rate:string,
-    count:number
-  }
-}
-
-/* fetch('https://fakestoreapi.com/products')
-            .then(res=>res.json())
-            .then(json=>console.log(json))
- */
-
-
+export type prod = {
+  id: number;
+  title: string;
+  price?: number;
+  description?: string;
+  category?: string;
+  image?: string;
+  rating?: {
+    rate: string;
+    count: number;
+  };
+};
 
 function App() {
-  let test:prod = {id:5,title:"Hi Barbie"}
-  
-  const [productsList, setProdList] = useState<prod[]>([test,test]);
+  const [productsList, setProdList] = useState<prod[]>([]);
 
-  useEffect(()=>{
-    console.log("Hello there!")
-  },[]);
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then(function setProdList(res) {
+        return res.json();
+      })
+      .then((json) => {
+        setProdList(json);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+  console.log(productsList);
 
   return (
-    <div className="App">
-      <Header/>
-      <Footer/>
-    </div>
+    <MyContext.Provider value={{ productsList, setProdList }}>
+      <div className="App">
+        <Header />
+        <Footer />
+      </div>
+    </MyContext.Provider>
   );
 }
 
