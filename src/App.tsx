@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import MyContext from "./components/context";
 import { useState, useEffect } from "react";
+import { DataBase } from "./API-Data";
 
 export type prod = {
   id: number;
@@ -12,7 +13,7 @@ export type prod = {
   category?: string;
   image?: string;
   rating?: {
-    rate: string;
+    rate: number;
     count: number;
   };
 };
@@ -20,18 +21,9 @@ export type prod = {
 function App() {
   const [productsList, setProdList] = useState<prod[]>([]);
 
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then(function setProdList(res) {
-        return res.json();
-      })
-      .then((json) => {
-        setProdList(json);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
+  useEffect(()=>{
+    setProdList(DataBase)
+  },[]);
 
   console.log(productsList);
 
