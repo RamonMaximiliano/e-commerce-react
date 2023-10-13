@@ -4,6 +4,8 @@ import { Footer } from "./components/Footer";
 import MyContext from "./components/context";
 import { useState, useEffect } from "react";
 import { DataBase } from "./API-Data";
+import { Route, Routes } from "react-router-dom";
+import { Products } from "./components/Products";
 
 export type prod = {
   id: number;
@@ -31,6 +33,9 @@ function App() {
     <MyContext.Provider value={{ productsList, setProdList }}>
       <div className="App">
         <Header />
+        <Routes>
+           <Route path="/products" element={<Products />} />
+        </Routes>
         <Footer />
       </div>
     </MyContext.Provider>

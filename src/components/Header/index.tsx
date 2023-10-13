@@ -1,12 +1,15 @@
 import cartImg from "../../images/carrinho-de-compras.png"
 import "./styles.css"
+import { Link } from "react-router-dom"
+import { Products } from "../Products"
+
 
 export const Header = () => {
     return (
         <div className="main-header">
             <ul className="menu-list">
                 <li>Home</li>
-                <li>Products</li>
+                <li><Link to="/products" className="LinkTag">Products</Link></li>
                 <li>Contact</li>
             </ul>
             <div>
