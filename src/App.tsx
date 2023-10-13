@@ -1,11 +1,11 @@
 import "./App.css";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import MyContext from "./components/context";
+import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
+import MyContext from "./components/context/Context";
 import { useState, useEffect } from "react";
-import { DataBase } from "./API-Data";
+import { DataBase } from "./API-Data/API-Data";
 import { Route, Routes } from "react-router-dom";
-import { Products } from "./components/Products";
+import { Products } from "./components/Products/Products";
 
 export type prod = {
   id: number;
