@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import { DataBase } from "./API-Data/API-Data";
 import { Route, Routes } from "react-router-dom";
 import { Products } from "./components/Products/Products";
+import { Home } from "./components/Home/Home";
+import { Contact } from "./components/Contact/Contact";
 
 export type prod = {
   id: number;
@@ -27,14 +29,15 @@ function App() {
     setProdList(DataBase)
   },[]);
 
-  console.log(productsList);
 
   return (
     <MyContext.Provider value={{ productsList, setProdList }}>
       <div className="App">
         <Header />
         <Routes>
+           <Route path="/" element={<Home />} />
            <Route path="/products" element={<Products />} />
+           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
@@ -74,6 +77,9 @@ Home:
 
 Products:
 - List of products
+- Add a filter by Category
+
+
 
 Contact:
 - GitHub, Linkedin, Portfolio
