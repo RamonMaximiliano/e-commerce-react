@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 .product {
     width: 230px;
     height: 280px;
@@ -17,18 +16,33 @@
     flex-direction: column;
     justify-content: space-between;
     border-radius: 10px;
+    transition: all 0.5s;
 }
 
 .product:hover {
     box-shadow: 0px 0px 15px 0.1px rgb(80, 80, 80);
     cursor: pointer;
+    transition: all 0.5s;
+}
+
+.product img {
+    transition: all 0.5s;
 }
 
 .product:hover img {
     max-width: 100%;
     max-height: 100%;
+    transition: all 0.5s;
 }
 
+.sub-descrip {
+    transition: all 0.5s;
+}
+
+.product:hover .sub-descrip {
+    transition: all 0.5s;
+    background-color: rgb(207, 207, 207);
+}
 
 .image-box {
     display: flex;
@@ -63,4 +77,5 @@
 .prod-price {
     font-weight: bold;
     font-style: italic;
+    color:rgb(0, 0, 168);
 }
