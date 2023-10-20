@@ -4,10 +4,12 @@ import { prod } from "../../App";
 export const Product = (props: prod) => {
   return (
     <div className="product" id={props.id.toString()}>
-      <img src={props.image}></img>
+      <div className="image-box">
+        <img src={props.image}></img>
+      </div>
       <div className="sub-descrip">
-        <p>{props.title}</p>
-        <p>{props.price}</p>
+        <p className="prod-title">{props.title}</p>
+        <p className="prod-price">{props.price}</p>
       </div>
     </div>
   );
