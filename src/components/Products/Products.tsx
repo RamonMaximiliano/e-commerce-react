@@ -6,7 +6,6 @@ import MyContext from "../context/Context";
 
 export const Products = () => {
   const { productsList } = useContext(MyContext);
-  console.log(productsList);
 
   return (
     <div className="products-view">
