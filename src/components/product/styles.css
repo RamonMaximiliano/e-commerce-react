@@ -4,7 +4,14 @@
     box-sizing: border-box;
 }
 
+/* 
+NOTE:
+for the overflow hidden property to work, the parent element must be forced into position relative 
+*/
+
 .product {
+    position: relative;
+    overflow: hidden;
     width: 230px;
     height: 280px;
     color: black;
@@ -27,6 +34,11 @@
 
 .product img {
     transition: all 0.5s;
+}
+
+.product:hover .cartIcon {
+    opacity: 1;
+    transform: none;
 }
 
 .product:hover img {
@@ -77,5 +89,18 @@
 .prod-price {
     font-weight: bold;
     font-style: italic;
-    color:rgb(0, 0, 168);
+    color: rgb(0, 0, 168);
+}
+
+.cartIcon {
+    opacity: 0;
+    padding: 6px;
+    background-color: #2a36b6;
+    width: 50px;
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 180px;
+    border-radius: 10px 0 0 0;
+    transform: translate(100%);
+    transition: all 0.5s;
 }

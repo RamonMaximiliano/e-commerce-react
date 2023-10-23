@@ -1,5 +1,6 @@
 import "./styles.css";
 import { prod } from "../../App";
+import cartImg from "../../images/carrinho-de-compras.png";
 
 export const Product = (props: prod) => {
   return (
@@ -7,6 +8,9 @@ export const Product = (props: prod) => {
       <div className="image-box">
         <img src={props.image}></img>
       </div>
+      
+        <img className="cartIcon" src={cartImg} />
+      
       <div className="sub-descrip">
         <p className="prod-title">{props.title}</p>
         <p className="prod-price">$ {props.price}</p>

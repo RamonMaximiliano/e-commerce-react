@@ -29,9 +29,13 @@ function App() {
     setProdList(DataBase)
   },[]);
 
+  const buy = () =>  {
+    console.log("hello there!")
+  }
+
 
   return (
-    <MyContext.Provider value={{ productsList, setProdList }}>
+    <MyContext.Provider value={{ productsList, setProdList, buy }}>
       <div className="App">
         <Header />
         <Routes>
