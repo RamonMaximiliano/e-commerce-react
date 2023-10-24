@@ -24,9 +24,6 @@ export const Product = (props: prod) => {
 /* 
 
 
-   <button className="deleteButton" id={props.id} onClick={e => deleteContact(e.target.id)}>X</button>
-
-
 id={item.id} 
 title={item.title} 
 price={item.price} 

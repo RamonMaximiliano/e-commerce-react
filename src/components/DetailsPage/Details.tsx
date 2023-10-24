@@ -1,15 +1,43 @@
-import "./styles.css"
+import "./styles.css";
 import { useContext } from "react";
 import MyContext from "../context/Context";
+import { prod } from "../../App";
 
 export const Details = () => {
-    const {detailID} = useContext(MyContext);
+  const { detailID, productsList } = useContext(MyContext);
 
-    return (
-        <div className="main-details">
-                Details
-                <p>{detailID}</p>
+  let prodDetail: Array<prod> = productsList.filter((product: prod) => {
+    return product.id == detailID;
+  });
+
+  return (
+    <div className="main-details">
+      <div className="prod-detail-title">
+        <p>{prodDetail[0].title}</p>
+      </div>
+      <div className="complete-product">
+        <div>
+          <img className="complete-product-image" src={prodDetail[0].image} />
         </div>
-    )
-}
-
+        <div className="complete-product-details">
+          <div className="prod-detail-category">
+            <p>Category: {prodDetail[0].category}</p>
+          </div>
+          <div className="prod-detail-id">
+            <p>Item code: {detailID}</p>
+          </div>
+          <div className="prod-detail-price">
+            <p>Price: $ {prodDetail[0].price}</p>
+          </div>
+          <div className="prod-detail-rate">
+            <p>{prodDetail[0].rating?.rate}</p>
+          </div>
+          <div className="prod-detail-description">
+            <h4>Description:</h4>
+            <p>{prodDetail[0].description}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
