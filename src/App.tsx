@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import { Products } from "./components/Products/Products";
 import { Home } from "./components/Home/Home";
 import { Contact } from "./components/Contact/Contact";
+import { Details } from "./components/DetailsPage/Details";
 
 export type prod = {
   id: number;
@@ -24,6 +25,7 @@ export type prod = {
 
 function App() {
   const [productsList, setProdList] = useState<prod[]>([]);
+  const [detailID, setDetailID] = useState<number>(0);
 
   useEffect(()=>{
     setProdList(DataBase)
@@ -35,13 +37,14 @@ function App() {
 
 
   return (
-    <MyContext.Provider value={{ productsList, setProdList, buy }}>
+    <MyContext.Provider value={{ productsList, setProdList, buy,detailID,setDetailID}}>
       <div className="App">
         <Header />
         <Routes>
            <Route path="/" element={<Home />} />
            <Route path="/products" element={<Products />} />
            <Route path="/contact" element={<Contact />} />
+           <Route path="/details" element={<Details />} />
         </Routes>
         <Footer />
       </div>
@@ -59,7 +62,7 @@ REACT E-COMMERCE:
 
 https://www.youtube.com/watch?v=-edmQKcOW8s&list=PLnHJACx3NwAe5XQDk9xLgym7FF8Q4FYW7&index=8&ab_channel=CodingAddict
 
-https://www.youtube.com/watch?v=sfmL6bGbiN8&ab_channel=freeCodeCamp.org
+
 https://fakestoreapi.com/
 https://fakestoreapi.com/products
 

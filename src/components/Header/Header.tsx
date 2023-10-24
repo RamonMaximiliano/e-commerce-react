@@ -9,6 +9,7 @@ export const Header = () => {
                 <li><Link to="/" className="LinkTag">Home</Link></li>
                 <li><Link to="/Products" className="LinkTag">Products</Link></li>
                 <li><Link to="/Contact" className="LinkTag">Contact</Link></li>
+                <li><Link to="/Details" className="LinkTag">Details</Link></li>
             </ul>
             <div>
                 <img src={cartImg} className="cartImg"/>

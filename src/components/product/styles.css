@@ -95,12 +95,15 @@ for the overflow hidden property to work, the parent element must be forced into
 .cartIcon {
     opacity: 0;
     padding: 6px;
-    background-color: #2a36b6;
+    background-color: #333fc4;
     width: 50px;
     position: absolute;
     margin-top: 170px;
     margin-left: 180px;
     border-radius: 10px 0 0 0;
     transform: translate(100%);
-    transition: all 0.5s;
+    transition: all 0.2s;
+}
+.cartIcon:hover {
+    background-color: #808af8;
 }
