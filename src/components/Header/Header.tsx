@@ -10,6 +10,7 @@ export const Header = () => {
                 <li><Link to="/Products" className="LinkTag">Products</Link></li>
                 <li><Link to="/Contact" className="LinkTag">Contact</Link></li>
                 <li><Link to="/Details" className="LinkTag">Details</Link></li>
+                <li><Link to="/Cart" className="LinkTag">Cart</Link></li>
             </ul>
             <div>
                 <img src={cartImg} className="cartImg"/>

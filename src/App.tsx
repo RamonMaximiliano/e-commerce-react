@@ -9,6 +9,7 @@ import { Products } from "./components/Products/Products";
 import { Home } from "./components/Home/Home";
 import { Contact } from "./components/Contact/Contact";
 import { Details } from "./components/DetailsPage/Details";
+import { Cart } from "./components/Cart/Cart";
 
 export type prod = {
   id: number;
@@ -45,6 +46,7 @@ function App() {
            <Route path="/products" element={<Products />} />
            <Route path="/contact" element={<Contact />} />
            <Route path="/details" element={<Details />} />
+           <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </div>
