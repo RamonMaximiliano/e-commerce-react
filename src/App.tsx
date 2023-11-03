@@ -27,24 +27,27 @@ export type prod = {
 function App() {
   const [productsList, setProdList] = useState<prod[]>([]);
   const [detailID, setDetailID] = useState<number>(0);
-  const [cartList, setCartList] = useState<prod[]>([]);
 
   useEffect(()=>{
     setProdList(DataBase)
   },[]);
 
- let singleArray:number[] = [0]
+ let endList:prod[] = []
+ let singleArray:number[] = []
+ 
  const buy = (e:number) =>{
   if (!singleArray.includes(e)) {
     singleArray.push(e);
   } 
-console.log(singleArray)
- }
+  endList = productsList.filter((item)=>{
+    return singleArray.includes(item.id)  
 
+  })
+  console.log(endList)
+}
 
-
-  return (
-    <MyContext.Provider value={{ productsList, setProdList, detailID, setDetailID, cartList, setCartList, buy}}>
+ return (
+    <MyContext.Provider value={{ productsList, setProdList, detailID, setDetailID, buy,endList }}>
       <div className="App">
         <Header />
         <Routes>
@@ -103,7 +106,11 @@ Cart:
 - Message if empty
 - Products to buy
 
-
+for(let product of productsList){
+  if(product.id == e){
+    endList = [...endList, product]
+  }
+}
 
 
 */
