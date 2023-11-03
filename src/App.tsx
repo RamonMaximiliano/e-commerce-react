@@ -27,18 +27,24 @@ export type prod = {
 function App() {
   const [productsList, setProdList] = useState<prod[]>([]);
   const [detailID, setDetailID] = useState<number>(0);
+  const [cartList, setCartList] = useState<prod[]>([]);
 
   useEffect(()=>{
     setProdList(DataBase)
   },[]);
 
-  const buy = () =>  {
-    console.log("hello there!")
-  }
+ let singleArray:number[] = [0]
+ const buy = (e:number) =>{
+  if (!singleArray.includes(e)) {
+    singleArray.push(e);
+  } 
+console.log(singleArray)
+ }
+
 
 
   return (
-    <MyContext.Provider value={{ productsList, setProdList, buy,detailID,setDetailID}}>
+    <MyContext.Provider value={{ productsList, setProdList, detailID, setDetailID, cartList, setCartList, buy}}>
       <div className="App">
         <Header />
         <Routes>

@@ -13,7 +13,7 @@ export const Product = (props: prod) => {
       <Link to="/Details" className="image-box" onClick={() => setDetailID(props.id)}>
         <img src={props.image}></img>
       </Link>
-      <img className="cartIcon" src={cartImg} onClick={buy} />
+      <img className="cartIcon" src={cartImg} onClick={()=> buy(props.id)} />
       <Link to="/Details" className="sub-descrip" onClick={() => setDetailID(props.id)}>
         <p className="prod-title">{props.title}</p>
         <p className="prod-price">$ {props.price}</p>

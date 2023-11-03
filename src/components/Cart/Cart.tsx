@@ -1,6 +1,8 @@
 import "./styles.css";
 import { prod } from "../../App";
 import trash from "../../images/trash.png"
+import MyContext from "../context/Context";
+import { useContext } from "react";
 
 let cartProd: prod = {
   id: 1,
@@ -13,8 +15,20 @@ let cartProd: prod = {
   rating: { rate: 3.9, count: 120 },
 };
 
+export type cartItem = {
+  id: number;
+  title: string;
+  price?: number;
+  quantity?: number;
+  total?: number;
+}
+
+
 export const Cart = () => {
-  return (
+  const { singleArray, productsList } = useContext(MyContext);
+  console.log(singleArray)
+ 
+ return (
     <div>
       <div className="cartTitle">
         <p>Your cart</p>
@@ -49,7 +63,7 @@ export const Cart = () => {
           <p>{cartProd.title}</p>
         </div>
         <div className="prodInfo-column">
-          <p>$  {cartProd.price}</p>
+          <p>$ {cartProd.price}</p>
         </div>
         <div className="prodInfo-column">
           <p>132465</p>
@@ -61,6 +75,46 @@ export const Cart = () => {
           <p>Item total:</p>
         </div>
       </div>
+
+
+
+
+
+      <div className="prodInfo">
+        <div className="prodInfo-column">
+          <img className="prod-prop-image" src={cartProd.image}/>
+        </div>
+        <div className="prodInfo-column">
+          <p>{cartProd.title}</p>
+        </div>
+        <div className="prodInfo-column">
+          <p>$ {cartProd.price}</p>
+        </div>
+        <div className="prodInfo-column">
+          <p>132465</p>
+        </div>
+        <div className="prodInfo-column">
+          <img className="prod-prop-trash" src={trash}/>
+        </div>
+        <div className="prodInfo-column">
+          <p>Item total:</p>
+        </div>
+      </div>
+
+
+
+
+
     </div>
   );
 };
+
+
+/* 
+<p className="new-button">
+  <Link to="/page1" element={<New />} className="new-button-link">New contact</Link>
+</p>
+{
+  newContList.map(contact => <Person name={contact.name} job={contact.job} picture={contact.pic} id={contact.id} />)
+}
+</> */
