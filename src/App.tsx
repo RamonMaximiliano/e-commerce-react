@@ -32,22 +32,16 @@ function App() {
     setProdList(DataBase)
   },[]);
 
- let endList:prod[] = []
  let singleArray:number[] = []
  
  const buy = (e:number) =>{
   if (!singleArray.includes(e)) {
     singleArray.push(e);
   } 
-  endList = productsList.filter((item)=>{
-    return singleArray.includes(item.id)  
-
-  })
-  console.log(endList)
-}
+} 
 
  return (
-    <MyContext.Provider value={{ productsList, setProdList, detailID, setDetailID, buy,endList }}>
+    <MyContext.Provider value={{ productsList, setProdList, detailID, setDetailID,singleArray,buy}}>
       <div className="App">
         <Header />
         <Routes>

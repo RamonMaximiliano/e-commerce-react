@@ -2,7 +2,7 @@ import "./styles.css";
 import { prod } from "../../App";
 import trash from "../../images/trash.png"
 import MyContext from "../context/Context";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 let cartProd: prod = {
   id: 1,
@@ -23,11 +23,18 @@ export type cartItem = {
   total?: number;
 }
 
-
 export const Cart = () => {
-  const { singleArray, productsList } = useContext(MyContext);
-  console.log(singleArray)
- 
+  const { singleArray, productsList} = useContext(MyContext);
+  const [cartList, setCartList] = useState<prod[]>([]); 
+
+  useEffect(()=>{
+    setCartList(            
+      productsList.filter((item:prod)=>{
+        return singleArray.includes(item.id)    
+      })
+    )
+  },[singleArray]);
+
  return (
     <div>
       <div className="cartTitle">
@@ -85,7 +92,7 @@ export const Cart = () => {
           <img className="prod-prop-image" src={cartProd.image}/>
         </div>
         <div className="prodInfo-column">
-          <p>{cartProd.title}</p>
+          <p>{cartProd.price}</p>
         </div>
         <div className="prodInfo-column">
           <p>$ {cartProd.price}</p>
