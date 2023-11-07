@@ -1,0 +1,24 @@
+.prodInfo {
+    display: flex;
+    max-width: 1200px;
+    height:150px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.prod-prop-image {
+    width: 80px;
+}
+
+.prod-prop-trash {
+    width: 30px;
+}
+
+.prodInfo-column {
+    width: 180px;
+}
