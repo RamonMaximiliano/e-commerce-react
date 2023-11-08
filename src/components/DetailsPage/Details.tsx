@@ -5,7 +5,7 @@ import { prod } from "../../App";
 import { useNavigate } from "react-router-dom";
 
 export const Details = () => {
-  const { detailID, productsList } = useContext(MyContext);
+  const { detailID, productsList, buy } = useContext(MyContext);
   const navigate = useNavigate();
 
   const handleNavigate = () => {
@@ -46,10 +46,12 @@ export const Details = () => {
             <button className="detail-buttons-prods" onClick={handleNavigate}>
               Back to Products
             </button>
-            <button className="detail-buttons-cart">Add to Cart</button>
+            <button className="detail-buttons-cart" >Add to Cart</button>
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+
