@@ -46,7 +46,7 @@ export const Details = () => {
             <button className="detail-buttons-prods" onClick={handleNavigate}>
               Back to Products
             </button>
-            <button className="detail-buttons-cart" >Add to Cart</button>
+            <button className="detail-buttons-cart" onClick={() => buy(prodDetail[0].id)}>Add to Cart</button>
           </div>
         </div>
       </div>

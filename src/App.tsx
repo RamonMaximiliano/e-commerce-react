@@ -28,17 +28,18 @@ function App() {
   const [productsList, setProdList] = useState<prod[]>([]);
   const [detailID, setDetailID] = useState<number>(0);
 
+
+  const [singleArray, setSingleArray] = useState<number[]>([]); 
+
   useEffect(()=>{
     setProdList(DataBase)
   },[]);
 
- let singleArray:number[] = []
- 
- const buy = (e:number) =>{
+const buy = (e: number) => {
   if (!singleArray.includes(e)) {
-    singleArray.push(e);
-  } 
-} 
+    setSingleArray([...singleArray, e]);
+  }
+};
 
  return (
     <MyContext.Provider value={{ productsList, setProdList, detailID, setDetailID,singleArray,buy}}>
@@ -60,6 +61,29 @@ function App() {
 export default App;
 
 /* 
+
+
+----------------------------------------------------------------------------------------------
+
+TASKS:
+
+- Add quantity functionality no cart
+- Filtrar os produtos by category
+- Calculate cart values
+- Display messages when adding items to cart
+- Screensize by device 
+- Home banner 
+- Contact page
+- Login functionality 
+- When buying check if user is logged in first 
+- Admin page to administer users registered 
+
+----------------------------------------------------------------------------------------------
+
+
+
+
+
 
 Checking
 
