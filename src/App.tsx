@@ -22,6 +22,7 @@ export type prod = {
     rate: number;
     count: number;
   };
+  delete?:(e: any) => void;
 };
 
 function App() {
@@ -42,7 +43,7 @@ const buy = (e: number) => {
 };
 
  return (
-    <MyContext.Provider value={{ productsList, setProdList, detailID, setDetailID,singleArray,buy}}>
+    <MyContext.Provider value={{ productsList, setProdList, detailID, setDetailID,singleArray,buy,setSingleArray}}>
       <div className="App">
         <Header />
         <Routes>
@@ -79,11 +80,6 @@ TASKS:
 - Admin page to administer users registered 
 
 ----------------------------------------------------------------------------------------------
-
-
-
-
-
 
 Checking
 

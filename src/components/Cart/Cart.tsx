@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { CartItem } from "../CartItem/CartItem";
 
 export const Cart = () => {
-  const { singleArray, productsList } = useContext(MyContext);
+  const { singleArray, productsList,setSingleArray } = useContext(MyContext);
   const [cartList, setCartList] = useState<prod[]>([]);
 
   useEffect(() => {
@@ -15,6 +15,14 @@ export const Cart = () => {
       })
     );
   }, [singleArray]);
+
+
+function deleteProd(e:number){
+  let updatedCartList = singleArray.filter((item:number)=>{
+    return item != e;
+  })
+  setSingleArray(updatedCartList);
+}
 
   return (
     <div>
@@ -42,7 +50,7 @@ export const Cart = () => {
         </div>
       </div>
 
-      {cartList.map((item) => ( <CartItem id={item.id} title={item.title} price={item.price} image={item.image} />))}
+      {cartList.map((item) => ( <CartItem id={item.id} title={item.title} price={item.price} image={item.image} delete={deleteProd}/>))}
 
     </div>
   );

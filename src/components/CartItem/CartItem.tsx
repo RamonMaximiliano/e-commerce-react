@@ -11,6 +11,7 @@ export type cartItem = {
   total?: number;
 };
 
+
 export const CartItem = (props: prod) => {
   return (
     <div className="prodInfo">
@@ -27,7 +28,7 @@ export const CartItem = (props: prod) => {
         <p>132465</p>
       </div>
       <div className="prodInfo-column">
-        <img className="prod-prop-trash" src={trash} />
+        <img className="prod-prop-trash" src={trash} onClick={() => props.delete && props.delete(props.id)}/>
       </div>
       <div className="prodInfo-column">
         <p>Item total:</p>
