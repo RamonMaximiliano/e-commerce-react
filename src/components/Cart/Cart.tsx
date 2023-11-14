@@ -27,14 +27,14 @@ function deleteProd(e:number){
   return (
     <div>
       <div className="cartTitle">
-        <p>Your cart</p>
+        <p>Cart</p>
       </div>
       <div className="prodInfo-title">
         <div className="prodInfo-column">
           <p className="prod-prop">PRODUCTS</p>
         </div>
         <div className="prodInfo-column">
-          <p className="prod-prop">NAME OF PRODUCT</p>
+          <p className="prod-prop">PRODUCT NAME</p>
         </div>
         <div className="prodInfo-column">
           <p className="prod-prop">PRICE</p>

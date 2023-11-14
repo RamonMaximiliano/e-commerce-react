@@ -17,6 +17,7 @@
 
 .prod-prop-trash {
     width: 30px;
+    cursor:pointer;
 }
 
 .prodInfo-column {
