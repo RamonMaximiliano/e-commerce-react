@@ -3,6 +3,7 @@ import github from "../../images/github.png";
 import linkedinreverse from "../../images/linkedin-reverse.png";
 import linkedin from "../../images/linkedin.png";
 import whatsreverse from "../../images/whatsapp-reverse.png";
+import aiImage from "../../images/aiImage.jpg";
 import whats from "../../images/whatsapp.png";
 import "./styles.css";
 
@@ -19,6 +20,9 @@ export const Contact = () => {
 
 
 
+      <img
+        src={aiImage}
+      />
       <img
         src={githubreverse}
       />
