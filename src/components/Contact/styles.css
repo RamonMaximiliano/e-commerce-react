@@ -1,0 +1,30 @@
+.icon-list{
+ display:flex;
+ width:200px;
+ justify-content: space-between;
+
+}
+.icon-list img{
+ width:50px;
+}
+
+.profile-image{
+    width:150px;
+    border-radius: 50%;
+}
+
+
+.main-contact-div{
+    display: flex;
+    max-width:650px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+
+.contact-div{
+    width:300px;
+    text-align: right;
+    justify-content:right;
+    background-color: green;
+}
