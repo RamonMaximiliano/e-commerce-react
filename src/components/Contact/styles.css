@@ -1,9 +1,11 @@
 .icon-list{
  display:flex;
- width:200px;
- justify-content: space-between;
+ max-width:650px;
+ justify-content: space-around;
 
 }
+
+
 .icon-list img{
  width:50px;
 }
@@ -16,15 +18,21 @@
 
 .main-contact-div{
     display: flex;
+    flex-direction: column;
     max-width:650px;
     margin: auto;
     justify-content: space-between;
+    margin-top: 50px;
+    background-color: yellow;
 }
 
 
 .contact-div{
-    width:300px;
-    text-align: right;
-    justify-content:right;
-    background-color: green;
+    max-width:650px;
+    text-align: left;
+    display:flex;
+    justify-content:space-between;
+    padding:15px;
+    color:black;
+    font-size: 18px;
 }
