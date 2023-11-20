@@ -100,6 +100,8 @@ TO DO:
 - If tries to buy without logging get error 
 - Icons
 - Footer 
+- Rapid color change when clicking buttons
+
 
 PAGES:
 
