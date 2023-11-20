@@ -4,18 +4,45 @@ import MyContext from "../context/Context";
 import { useContext, useEffect, useState } from "react";
 import { CartItem } from "../CartItem/CartItem";
 
+export type quantityItem = {
+  id: number,
+  title: string,
+  price: number,
+  quantity?:1,
+  totalPrice?:number,
+  description?: string,
+  category?: string,
+  image?: string,
+  rating?: {
+    rate: number,
+    count: number,
+  },
+  delete?:(e: any) => void,
+};
+
 export const Cart = () => {
-  const { singleArray, productsList,setSingleArray } = useContext(MyContext);
-  const [cartList, setCartList] = useState<prod[]>([]);
+  const { singleArray, productsList, setSingleArray } = useContext(MyContext);
+  const [cartList, setCartList] = useState<quantityItem[]>([]);
+  const [totalCart, setTotalCart] = useState<number>(0);
 
   useEffect(() => {
     setCartList(
-      productsList.filter((item: prod) => {
-        return singleArray.includes(item.id);
-      })
+      productsList
+        .filter((item: prod) => singleArray.includes(item.id))
+        .map((item: prod) => ({
+          ...item,
+          quantity: 1, // Set default value to 1
+        }))
     );
   }, [singleArray]);
 
+useEffect(()=>{
+  setTotalCart(
+    cartList.reduce((tot, item) => {
+      return tot + (item.price || 0) * (item.quantity || 0);
+    }, 0));
+}, [cartList]
+);
 
 function deleteProd(e:number){
   let updatedCartList = singleArray.filter((item:number)=>{
@@ -50,8 +77,12 @@ function deleteProd(e:number){
         </div>
       </div>
 
-      {cartList.map((item) => ( <CartItem id={item.id} title={item.title} price={item.price} image={item.image} delete={deleteProd}/>))}
+      {cartList.map((item) => ( <CartItem id={item.id} title={item.title} quantity={item.quantity} price={item.price} image={item.image} delete={deleteProd}/>))}
 
+      <div className="cartTotal">
+        <p>Total: </p>
+        <p>R$ {totalCart}</p>
+      </div>
     </div>
   );
 };
