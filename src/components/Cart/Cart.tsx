@@ -12,6 +12,8 @@ export type quantityItem = {
   totalPrice?:number,
   description?: string,
   category?: string,
+  plus?:any,
+  minus?:any,
   image?: string,
   rating?: {
     rate: number,
@@ -43,6 +45,39 @@ useEffect(()=>{
     }, 0));
 }, [cartList]
 );
+
+
+function plus(e: number) {
+  console.log(`plus ${e}`);
+  let plusList = cartList.map((item) => {
+    if (item.id === e) {
+      // Check if 'quantity' is defined before incrementing
+      if (item.quantity !== undefined) {
+        item.quantity ++;
+      }
+    }
+    return item; // Return the modified item
+  });
+  
+  // Update cartList with the modified items
+  setCartList(plusList)
+}
+
+function minus(e: number) {
+  console.log(`minus ${e}`);
+  let minusList = cartList.map((item) => {
+    if (item.id === e) {
+      // Check if 'quantity' is defined before incrementing
+      if (item.quantity !== undefined) {
+        item.quantity --;
+      }
+    }
+    return item; // Return the modified item
+  });
+  
+  // Update cartList with the modified items
+    setCartList(minusList)
+}
 
 function deleteProd(e:number){
   let updatedCartList = singleArray.filter((item:number)=>{
@@ -77,7 +112,7 @@ function deleteProd(e:number){
         </div>
       </div>
 
-      {cartList.map((item) => ( <CartItem id={item.id} title={item.title} quantity={item.quantity} price={item.price} image={item.image} delete={deleteProd}/>))}
+      {cartList.map((item) => ( <CartItem id={item.id} title={item.title} quantity={item.quantity} price={item.price} image={item.image} delete={deleteProd} plus={plus} minus={minus}/>))}
 
       <div className="cartTotal">
         <p>Total: </p>

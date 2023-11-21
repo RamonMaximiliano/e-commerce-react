@@ -4,10 +4,8 @@ import trash from "../../images/trash.png";
 import { quantityItem } from "../Cart/Cart";
 
 export const CartItem = (props: quantityItem) => {
-
-  const itemTotal = props.quantity && props.price
-    ? props.quantity * props.price
-    : 0;
+  const itemTotal =
+    props.quantity && props.price ? props.quantity * props.price : 0;
 
   return (
     <div className="prodInfo">
@@ -21,10 +19,18 @@ export const CartItem = (props: quantityItem) => {
         <p>$ {props.price}</p>
       </div>
       <div className="prodInfo-column">
+        <div className="quantity-buttons">
+        <p onClick={() => props.minus && props.minus(props.id)}>-</p>
         <p>{props.quantity}</p>
+        <p onClick={() => props.plus && props.plus(props.id)}>+</p>
+        </div>
       </div>
       <div className="prodInfo-column">
-        <img className="prod-prop-trash" src={trash} onClick={() => props.delete && props.delete(props.id)}/>
+        <img
+          className="prod-prop-trash"
+          src={trash}
+          onClick={() => props.delete && props.delete(props.id)}
+        />
       </div>
       <div className="prodInfo-column">
         <p>{itemTotal}</p>

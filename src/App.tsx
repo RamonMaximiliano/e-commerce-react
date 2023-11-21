@@ -101,6 +101,9 @@ TO DO:
 - Icons
 - Footer 
 - Rapid color change when clicking buttons
+- Não deixar quantity negativo
+- casas decimais total cart
+- Tirar link cart menu e somente icone cart
 
 
 PAGES:
