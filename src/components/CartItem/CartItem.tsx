@@ -33,7 +33,7 @@ export const CartItem = (props: quantityItem) => {
         />
       </div>
       <div className="prodInfo-column">
-        <p>{itemTotal}</p>
+        <p>$ {itemTotal.toFixed(2)}</p>
       </div>
     </div>
   );

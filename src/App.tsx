@@ -104,6 +104,7 @@ TO DO:
 - Não deixar quantity negativo
 - casas decimais total cart
 - Tirar link cart menu e somente icone cart
+- Fix delete and change route cart list bug
 
 
 PAGES:

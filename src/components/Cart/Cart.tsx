@@ -68,7 +68,7 @@ function minus(e: number) {
   let minusList = cartList.map((item) => {
     if (item.id === e) {
       // Check if 'quantity' is defined before incrementing
-      if (item.quantity !== undefined) {
+      if (item.quantity !== undefined && item.quantity>1) {
         item.quantity --;
       }
     }
@@ -116,7 +116,7 @@ function deleteProd(e:number){
 
       <div className="cartTotal">
         <p>Total: </p>
-        <p>R$ {totalCart}</p>
+        <p>$ {totalCart.toFixed(2)}</p>
       </div>
     </div>
   );
