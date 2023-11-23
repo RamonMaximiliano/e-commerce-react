@@ -1,7 +1,7 @@
 import "./styles.css";
 import { prod } from "../../App";
 import trash from "../../images/trash.png";
-import { quantityItem } from "../Cart/Cart";
+import { quantityItem } from "../../App";
 
 export const CartItem = (props: quantityItem) => {
   const itemTotal =

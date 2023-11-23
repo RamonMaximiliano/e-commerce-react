@@ -42,7 +42,7 @@ export const Contact = () => {
       <div className="contact-div">
         <div>
           <h3>Hello world!</h3>
-          Just a guy learning web dev
+          Just a guy coding
         </div>
         <div>
           <img src={aiImage} className="profile-image" />

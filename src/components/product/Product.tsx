@@ -21,15 +21,3 @@ export const Product = (props: prod) => {
     </div>
   );
 };
-
-/* 
-
-id={item.id} 
-title={item.title} 
-price={item.price} 
-description={item.description} 
-category={item.category} 
-image={item.image} 
-key={item.id}
-
-*/

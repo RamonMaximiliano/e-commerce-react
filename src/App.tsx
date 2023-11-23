@@ -22,36 +22,75 @@ export type prod = {
     rate: number;
     count: number;
   };
-  delete?:(e: any) => void;
+  delete?: (e: any) => void;
+};
+
+export type quantityItem = {
+  id: number;
+  title?: string;
+  price?: number;
+  quantity?: number;
+  totalPrice?: number;
+  description?: string;
+  category?: string;
+  plus?: any;
+  minus?: any;
+  image?: string;
+  rating?: {
+    rate: number;
+    count: number;
+  };
+  delete?: (e: any) => void;
 };
 
 function App() {
   const [productsList, setProdList] = useState<prod[]>([]);
   const [detailID, setDetailID] = useState<number>(0);
+  const [cartList, setCartList] = useState<quantityItem[]>([]);
 
+  useEffect(() => {
+    setProdList(DataBase);
+  }, []);
 
-  const [singleArray, setSingleArray] = useState<number[]>([]); 
+  const buy = (e: number) => {
+    const newItemBought: quantityItem[] = productsList.filter(
+      (bought) => bought.id === e
+    );
+    const itemAlreadyInCart = cartList.find((item) => item.id === e);
 
-  useEffect(()=>{
-    setProdList(DataBase)
-  },[]);
+    if (!itemAlreadyInCart) {
+      const newItemsWithDefaultQuantity = newItemBought.map((item) => ({
+        ...item,
+        quantity: 1,
+      }));
 
-const buy = (e: number) => {
-  if (!singleArray.includes(e)) {
-    setSingleArray([...singleArray, e]);
-  }
-};
+      setCartList((prevCartList) => [
+        ...prevCartList,
+        ...newItemsWithDefaultQuantity,
+      ]);
+    }
+  };
 
- return (
-    <MyContext.Provider value={{ productsList, setProdList, detailID, setDetailID,singleArray,buy,setSingleArray}}>
+  return (
+    <MyContext.Provider
+      value={{
+        productsList,
+        setProdList,
+        detailID,
+        setDetailID,
+        buy,
+        cartList,
+        setCartList,
+      }}
+    >
       <div className="App">
         <Header />
         <Routes>
-           <Route path="/" element={<Home />} />
-           <Route path="/products" element={<Products />} />
-           <Route path="/contact" element={<Contact />} />
-           <Route path="/details" element={<Details />} />
-           <Route path="/cart" element={<Cart />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/details" element={<Details />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </div>
@@ -66,71 +105,27 @@ export default App;
 
 ----------------------------------------------------------------------------------------------
 
-TASKS:
+TO DO:
 
-- Add quantity functionality no cart
 - Filtrar os produtos by category
-- Calculate cart values
 - Display messages when adding items to cart
 - Screensize by device 
-- Home banner 
-- Contact page
 - Login functionality 
 - When buying check if user is logged in first 
 - Admin page to administer users registered 
+- Main products Carrosel page 
+- Login / Register user page 
+- If tries to buy without logging get error 
+- Rapid color change when clicking buttons
+- Tirar link cart menu e somente icone cart
+- Review all codes to have a better understanding
 
 ----------------------------------------------------------------------------------------------
 
 Checking
 
 REACT E-COMMERCE:
-
 https://www.youtube.com/watch?v=-edmQKcOW8s&list=PLnHJACx3NwAe5XQDk9xLgym7FF8Q4FYW7&index=8&ab_channel=CodingAddict
-
-
-https://fakestoreapi.com/
-https://fakestoreapi.com/products
-
-
-TO DO:
-
-- Check the API details
-- Main products page 
-- Login / Register user page 
-- If tries to buy without logging get error 
-- Icons
-- Footer 
-- Rapid color change when clicking buttons
-- Não deixar quantity negativo
-- casas decimais total cart
-- Tirar link cart menu e somente icone cart
-- Fix delete and change route cart list bug
-
-
-PAGES:
-
-Home:
-- Carrosel 
-- Login 
-
-Products:
-- List of products
-- Add a filter by Category
-
-
-
-Contact:
-- GitHub, Linkedin, Portfolio
-
-Cart:
-- Message if empty
-- Products to buy
-
-for(let product of productsList){
-  if(product.id == e){
-    endList = [...endList, product]
-  }
-}
 
 
 */
