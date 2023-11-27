@@ -50,6 +50,10 @@ export const Cart = () => {
     setCartList(undeletedList);
   }
 
+  function clearList() {
+    setCartList([]);
+  }
+
   return (
     <div>
       <div className="cartTitle">
@@ -89,9 +93,20 @@ export const Cart = () => {
         />
       ))}
 
-      <div className="cartTotal">
-        <p>Total: </p>
-        <p>$ {totalCart.toFixed(2)}</p>
+      <div className="cart-container">
+        <div className="cart-checkout">
+          <div className="cartTotal">
+            <p>Total: </p>
+            <p>$ {totalCart.toFixed(2)}</p>
+          </div>
+
+          <div className="cart-buttons">
+            <button className="cart-buttons-clear" onClick={clearList}>
+              Clear Cart
+            </button>
+            <button className="cart-buttons-checkout">Checkout</button>
+          </div>
+        </div>
       </div>
     </div>
   );
