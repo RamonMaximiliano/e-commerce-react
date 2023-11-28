@@ -3,10 +3,17 @@ import MyContext from "../context/Context";
 import { useContext, useEffect, useState } from "react";
 import { CartItem } from "../CartItem/CartItem";
 import { quantityItem } from "../../App";
+import { useNavigate } from "react-router-dom";
 
 export const Cart = () => {
   const { cartList, setCartList } = useContext(MyContext);
   const [totalCart, setTotalCart] = useState<number>(0);
+  const navigateCheckout = useNavigate();
+
+  const handleCheckoutNav = () => {
+    navigateCheckout("/checkout");
+    setCartList([]);
+  };
 
   useEffect(() => {
     setTotalCart(
@@ -104,7 +111,12 @@ export const Cart = () => {
             <button className="cart-buttons-clear" onClick={clearList}>
               Clear Cart
             </button>
-            <button className="cart-buttons-checkout">Checkout</button>
+            <button
+              className="cart-buttons-checkout"
+              onClick={handleCheckoutNav}
+            >
+              Checkout
+            </button>
           </div>
         </div>
       </div>

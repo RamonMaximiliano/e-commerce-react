@@ -10,6 +10,7 @@ import { Home } from "./components/Home/Home";
 import { Contact } from "./components/Contact/Contact";
 import { Details } from "./components/DetailsPage/Details";
 import { Cart } from "./components/Cart/Cart";
+import { Checkout } from "./components/Checkout/Checkout";
 
 export type prod = {
   id: number;
@@ -91,6 +92,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/details" element={<Details />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </div>

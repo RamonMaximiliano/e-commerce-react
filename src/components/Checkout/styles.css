@@ -1,0 +1,11 @@
+.main-checkout {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.main-checkout img {
+    max-width: 80%;
+    margin: auto;
+    border-radius: 2%;
+}

@@ -1,5 +1,4 @@
 import "./styles.css";
-import { prod } from "../../App";
 import trash from "../../images/trash.png";
 import { quantityItem } from "../../App";
 
