@@ -11,7 +11,11 @@ export const Cart = () => {
   const navigateCheckout = useNavigate();
 
   const handleCheckoutNav = () => {
-    navigateCheckout("/checkout");
+     if (cartList.length != 0) {
+      navigateCheckout("/checkout");
+    } else {
+      navigateCheckout("/checkoutnope");
+    }
     setCartList([]);
   };
 

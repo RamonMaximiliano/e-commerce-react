@@ -11,6 +11,8 @@ import { Contact } from "./components/Contact/Contact";
 import { Details } from "./components/DetailsPage/Details";
 import { Cart } from "./components/Cart/Cart";
 import { Checkout } from "./components/Checkout/Checkout";
+import { Checkoutnope } from "./components/Checkoutnope/Checkoutnope";
+
 
 export type prod = {
   id: number;
@@ -93,6 +95,7 @@ function App() {
           <Route path="/details" element={<Details />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkoutnope" element={<Checkoutnope />} />
         </Routes>
         <Footer />
       </div>
