@@ -9,8 +9,8 @@
     justify-content: space-between;
     background-color: #2b3175;
     align-items: center;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 25%;
+    padding-right: 30%;
     height:80px;
 }
 
@@ -18,23 +18,48 @@
     display: flex;
     list-style-type: none;
     color: white;
+    width: 600px;
 }
 
 .menu-list li {
     padding: 5%;
     list-style: none;
     color:white;
-}
-
-.cartImg {
-    background-color:white;
-    width: 50px;
-    padding:5px;
-    border-radius: 50%;
+    line-height: 15px;
 }
 
 .LinkTag{
     list-style: none;
     color:white;
     text-decoration: none;
+    transition: all 2s;
+}
+.LinkTag:hover{
+    text-decoration: underline;
+}
+
+.cart-div{
+    background-color: white;
+    width:55px;
+    height:55px;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.cart-div:hover .cartImg {
+    transform: scale(1.1); 
+    background-color: #8089f3;
+}
+.cart-div:hover {
+    background-color: #8089f3;
+}
+
+.cartImg {
+    background-color:white;
+    width: 35px;
+    margin-top:10px;
+    transition: all 0.5s ;
 }
