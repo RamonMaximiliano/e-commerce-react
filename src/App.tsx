@@ -115,15 +115,25 @@ TO DO:
 - Filtrar os produtos by category
 - Display messages when adding items to cart
 - Screensize by device 
-- Login functionality 
-- When buying check if user is logged in first 
-- Admin page to administer users registered 
 - Main products Carrosel page 
-- Login / Register user page 
-- If tries to buy without logging get error 
 - Rapid color change when clicking buttons
-- Tirar link cart menu e somente icone cart
 - Review all codes to have a better understanding
+
+
+https://www.youtube.com/watch?v=SK9AlIbexOE&ab_channel=MonsterlessonsAcademy
+
+https://www.youtube.com/watch?v=CMg_1KxpM_4&ab_channel=DeveloperGeorge
+
+
+
+CAROUSEL:
+
+- Arrow buttons
+- Dots buttons
+- Change every couple of seconds
+- Adaptate to screensize
+
+
 
 ----------------------------------------------------------------------------------------------
 
@@ -131,6 +141,12 @@ Checking
 
 REACT E-COMMERCE:
 https://www.youtube.com/watch?v=-edmQKcOW8s&list=PLnHJACx3NwAe5XQDk9xLgym7FF8Q4FYW7&index=8&ab_channel=CodingAddict
+
+CAROUSEL:
+
+https://www.youtube.com/watch?v=SK9AlIbexOE&ab_channel=MonsterlessonsAcademy
+
+https://www.youtube.com/watch?v=CMg_1KxpM_4&ab_channel=DeveloperGeorge
 
 
 */
