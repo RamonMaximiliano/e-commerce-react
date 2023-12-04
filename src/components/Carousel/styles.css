@@ -1,0 +1,14 @@
+.main-carousel-div {
+    max-width: 1000px;
+
+    background-color: green;
+    margin: auto;
+
+    /* overflow:hidden;  */
+}
+
+.inner-carousel {
+    transform: translate(-100%);
+    display: flex;
+    flex-direction: row;
+}

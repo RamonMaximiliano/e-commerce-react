@@ -152,20 +152,6 @@ https://www.youtube.com/watch?v=SK9AlIbexOE&ab_channel=MonsterlessonsAcademy
 https://www.youtube.com/watch?v=CMg_1KxpM_4&ab_channel=DeveloperGeorge
 
 
-Why does the file .jpg is interpreted by typescript as type string?
-here for example when I put the mouse over image1 it appears as type string
-
-import "./styles.css";
-import { CarouselItem } from "../CarouselItem/CarouselItem";
-import image1 from "../../images/Carrousel/image1.jpg";
-import image2 from "../../images/Carrousel/image2.jpg";
-import image3 from "../../images/Carrousel/image3.jpg";
-
-type carousel = {
-  id: number;
-  image: string;
-};
-
 
 
 

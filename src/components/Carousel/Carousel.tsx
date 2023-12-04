@@ -27,9 +27,16 @@ export const Carousel = () => {
 
   return (
     <>
+    <div>
+      <h2>Hello there!</h2>
+    </div>
+    <div className="main-carousel-div">
+      <div className="inner-carousel">
       {carouselImages.map((item: carousel) => {
         return <CarouselItem key={item.id} id={item.id} image={item.image} />;
       })}
+      </div>
+      </div>
     </>
   );
 };
