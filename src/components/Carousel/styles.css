@@ -1,10 +1,10 @@
 .main-carousel-div {
     max-width: 1000px;
-
     background-color: green;
     margin: auto;
-
-    /* overflow:hidden;  */
+    overflow:hidden;
+    position:relative;
+    display:flex;
 }
 
 .inner-carousel {
@@ -12,3 +12,21 @@
     display: flex;
     flex-direction: row;
 }
+
+.arrow-buttons{
+    width: 100%;
+    background-color: blue;
+    margin: auto;
+    cursor: pointer;
+    position:absolute;
+    justify-content:space-between;
+    margin-top: 30%;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
