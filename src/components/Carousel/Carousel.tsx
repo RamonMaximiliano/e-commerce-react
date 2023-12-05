@@ -27,7 +27,7 @@ export const Carousel = () => {
 
   return (
     <>
-      <div>
+      <div className="home-title">
         <h2>Hello there!</h2>
       </div>
       <div className="main-carousel-div">

@@ -118,6 +118,7 @@ TO DO:
 - Main products Carrosel page 
 - Rapid color change when clicking buttons
 - Review all codes to have a better understanding
+- Fix carousel image size
 
 
 https://www.youtube.com/watch?v=SK9AlIbexOE&ab_channel=MonsterlessonsAcademy
@@ -128,7 +129,6 @@ https://www.youtube.com/watch?v=CMg_1KxpM_4&ab_channel=DeveloperGeorge
 
 CAROUSEL:
 
-- Arrow buttons
 - Dots buttons
 - Change every couple of seconds
 - Adaptate to screensize
