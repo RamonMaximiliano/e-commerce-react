@@ -39,8 +39,12 @@ export const Carousel = () => {
           })}
         </div>
         <div className="arrow-buttons">
-          <span className="material-symbols-outlined">arrow_back_ios</span>
-          <span className="material-symbols-outlined">arrow_forward_ios</span>
+          <div className="arrow-left">
+            <span className="material-symbols-outlined">arrow_back_ios</span>
+          </div>
+          <div className="arrow-right">
+            <span className="material-symbols-outlined">arrow_forward_ios</span>
+          </div>
         </div>
       </div>
     </>
