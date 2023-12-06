@@ -3,7 +3,7 @@ import { CarouselItem } from "../CarouselItem/CarouselItem";
 import image1 from "../../images/Carrousel/image1.jpg";
 import image2 from "../../images/Carrousel/image2.jpg";
 import image3 from "../../images/Carrousel/image3.jpg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type carousel = {
   id: number;
@@ -11,7 +11,7 @@ type carousel = {
 };
 
 export const Carousel = () => {
-  const [index, setIndex] = useState(2);
+  const [index, setIndex] = useState(0);
   const carouselImages: carousel[] = [
     {
       id: 1,
@@ -46,6 +46,27 @@ export const Carousel = () => {
     }
   };
 
+const button0 = ()=>{
+  setIndex(0)
+}
+const button1 = ()=>{
+  setIndex(1)
+}
+const button2 = ()=>{
+  setIndex(2)
+}
+
+let changeImage = () => {
+  setIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
+};
+
+useEffect(() => {
+  const intervalId = setInterval(changeImage, 7000);
+  return () => {
+    clearInterval(intervalId);
+  };
+}, []); 
+
   return (
     <>
       <div className="home-title">
@@ -72,10 +93,16 @@ export const Carousel = () => {
         </div>
       </div>
       <div className="circle-buttons">
-        <span className="material-symbols-outlined">radio_button_unchecked</span>
-        <span className="material-symbols-outlined">radio_button_checked</span>
-        <span className="material-symbols-outlined">radio_button_checked</span>
-      </div>
+        {/* BUTTON 1 */}
+      {index === 0 ? (<span className="material-symbols-outlined" onClick={()=>button0()}>radio_button_checked</span>
+      ) : <span className="material-symbols-outlined" onClick={()=>button0()}>radio_button_unchecked</span>}
+ {/* BUTTON 2 */}
+      {index === 1 ? (<span className="material-symbols-outlined" onClick={()=>button1()}>radio_button_checked</span>
+      ) : <span className="material-symbols-outlined" onClick={()=>button1()} >radio_button_unchecked</span>}
+ {/* BUTTON 3 */}
+      {index === 2 ? (<span className="material-symbols-outlined" onClick={()=>button2()}>radio_button_checked</span>
+      ) : <span className="material-symbols-outlined" onClick={()=>button2()}>radio_button_unchecked</span>}
+     </div>
     </>
   );
 };

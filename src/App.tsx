@@ -115,45 +115,19 @@ TO DO:
 - Filtrar os produtos by category
 - Display messages when adding items to cart
 - Screensize by device 
-- Main products Carrosel page 
+- New products Carrosel page 
 - Rapid color change when clicking buttons
 - Review all codes to have a better understanding
-- Fix carousel image size
-
-
-https://www.youtube.com/watch?v=SK9AlIbexOE&ab_channel=MonsterlessonsAcademy
-
-https://www.youtube.com/watch?v=CMg_1KxpM_4&ab_channel=DeveloperGeorge
-
-
 
 CAROUSEL:
-
-- Dots buttons
-- Change every couple of seconds
+- Create carousel images
 - Adaptate to screensize
 
-
-
 ----------------------------------------------------------------------------------------------
-
-
-
 
 Checking
 
 REACT E-COMMERCE:
 https://www.youtube.com/watch?v=-edmQKcOW8s&list=PLnHJACx3NwAe5XQDk9xLgym7FF8Q4FYW7&index=8&ab_channel=CodingAddict
-
-CAROUSEL:
-
-https://www.youtube.com/watch?v=SK9AlIbexOE&ab_channel=MonsterlessonsAcademy
-
-https://www.youtube.com/watch?v=CMg_1KxpM_4&ab_channel=DeveloperGeorge
-
-
-
-
-
 
 */
