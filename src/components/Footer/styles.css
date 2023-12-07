@@ -2,12 +2,26 @@
         background-color: #2b3175;
         align-items: center;
         text-align: center;
-        height:80px;
-        margin-top: 780px;
+        margin-top: 500px;
 }
 
-.images{
+.images-footer{
     align-items: center;
     text-align: center;
-    padding:2px;
+    background-color: #2b3175;
+    cursor:pointer;
+    display:flex;
+    width: 200px;
+    margin: auto;
+    padding-top:15px;
+    padding-bottom:30px;
+    justify-content: space-between;
+    transition: all 1s;
+}
+
+.cartImg{
+    background-color: #2b3175;
+    cursor:pointer;
+    width:40px;
+    transition: all 1s;
 }

@@ -4,7 +4,7 @@ import linkedinreverse from "../../images/linkedin-reverse.png";
 import linkedin from "../../images/linkedin.png";
 import whatsreverse from "../../images/whatsapp-reverse.png";
 import whats from "../../images/whatsapp.png";
-import "./styles.css"
+import "./styles.css";
 
 import { useState } from "react";
 
@@ -34,26 +34,37 @@ export const Footer = () => {
   };
   return (
     <div className="main-footer">
-        <div className="images">
-      <img
-        src={githubIMG ? github : githubreverse}
-        className="cartImg"
-        onMouseOver={githubMouseOver}
-        onMouseOut={githubMouseOut}
-      />
-      <img
-        src={linkedinIMG ? linkedin : linkedinreverse}
-        className="cartImg"
-        onMouseOver={linkedinMouseOver}
-        onMouseOut={linkedinMouseOut}
-      />
-
-      <img
-        src={whatsIMG ? whats : whatsreverse}
-        className="cartImg"
-        onMouseOver={whatsIMGMouseOver}
-        onMouseOut={whatsIMGMouseOut}
-      />
+      <div className="images-footer">
+        <a href="https://github.com/RamonMaximiliano" target="_blank">
+          <img
+            src={githubIMG ? github : githubreverse}
+            className="cartImg"
+            onMouseOver={githubMouseOver}
+            onMouseOut={githubMouseOut}
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+          target="_blank"
+        >
+          <img
+            src={linkedinIMG ? linkedin : linkedinreverse}
+            className="cartImg"
+            onMouseOver={linkedinMouseOver}
+            onMouseOut={linkedinMouseOut}
+          />
+        </a>
+        <a
+          href="https://api.whatsapp.com/send?phone=5551996927970"
+          target="_blank"
+        >
+          <img
+            src={whatsIMG ? whats : whatsreverse}
+            className="cartImg"
+            onMouseOver={whatsIMGMouseOver}
+            onMouseOut={whatsIMGMouseOut}
+          />
+        </a>
       </div>
     </div>
   );

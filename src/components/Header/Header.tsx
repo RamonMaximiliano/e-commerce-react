@@ -13,7 +13,7 @@ export const Header = () => {
             <div>
                 <Link to="/Cart">
                     <div className="cart-div">
-                    <img src={cartImg} className="cartImg"/>
+                    <img src={cartImg} className="cartImage"/>
                     </div>
                 </Link>
             </div>
