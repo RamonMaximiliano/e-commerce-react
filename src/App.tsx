@@ -118,10 +118,9 @@ TO DO:
 - New products Carrosel page 
 - Rapid color change when clicking buttons
 - Review all codes to have a better understanding
+- On contact page, provide a complete explanation of the project as well as the technologies used
 
-CAROUSEL:
-- Create carousel images
-- Adaptate to screensize
+
 
 ----------------------------------------------------------------------------------------------
 

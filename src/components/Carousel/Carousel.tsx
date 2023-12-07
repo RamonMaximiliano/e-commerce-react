@@ -3,6 +3,7 @@ import { CarouselItem } from "../CarouselItem/CarouselItem";
 import image1 from "../../images/Carrousel/image1.jpg";
 import image2 from "../../images/Carrousel/image2.jpg";
 import image3 from "../../images/Carrousel/image3.jpg";
+import image4 from "../../images/Carrousel/image4.jpg";
 import { useState, useEffect } from "react";
 
 type carousel = {
@@ -25,15 +26,21 @@ export const Carousel = () => {
       id: 3,
       image: image3,
     },
+    {
+      id: 4,
+      image: image4,
+    },
   ];
 
   const leftArrow = () => {
     if (index === 0) {
-      setIndex(2);
+      setIndex(3);
     } else if (index === 1) {
       setIndex(0);
     } else if (index === 2) {
       setIndex(1);
+    }else if (index === 3) {
+      setIndex(2);
     }
   };
   const rightArrow = () => {
@@ -42,6 +49,8 @@ export const Carousel = () => {
     } else if (index === 1) {
       setIndex(2);
     } else if (index === 2) {
+      setIndex(3);
+    }else if (index === 3) {
       setIndex(0);
     }
   };
@@ -55,13 +64,16 @@ const button1 = ()=>{
 const button2 = ()=>{
   setIndex(2)
 }
+const button3 = ()=>{
+  setIndex(3)
+}
 
 let changeImage = () => {
   setIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
 };
 
 useEffect(() => {
-  const intervalId = setInterval(changeImage, 7000);
+  const intervalId = setInterval(changeImage, 5000);
   return () => {
     clearInterval(intervalId);
   };
@@ -102,6 +114,9 @@ useEffect(() => {
  {/* BUTTON 3 */}
       {index === 2 ? (<span className="material-symbols-outlined" onClick={()=>button2()}>radio_button_checked</span>
       ) : <span className="material-symbols-outlined" onClick={()=>button2()}>radio_button_unchecked</span>}
+ {/* BUTTON 4 */}
+      {index === 3 ? (<span className="material-symbols-outlined" onClick={()=>button3()}>radio_button_checked</span>
+      ) : <span className="material-symbols-outlined" onClick={()=>button3()}>radio_button_unchecked</span>}
      </div>
     </>
   );
