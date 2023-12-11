@@ -10,7 +10,7 @@ export const Header = () => {
     setClicked(true);
     setTimeout(() => {
       setClicked(false);
-    }, 200);
+    }, 150);
   }
 
   return (

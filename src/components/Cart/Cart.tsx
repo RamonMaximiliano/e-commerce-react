@@ -15,7 +15,7 @@ export const Cart = () => {
     setClickedClear(true);
     setTimeout(() => {
       setClickedClear(false);
-    }, 250);
+    }, 150);
   }
 
   const handleCheckoutNav = () => {

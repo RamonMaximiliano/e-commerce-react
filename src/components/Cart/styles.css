@@ -91,5 +91,6 @@
 
 .clickedClearClass{
     background-color: rgb(252, 144, 144) !important;
-    padding:7px;
+    scale: 0.9;
 }
+

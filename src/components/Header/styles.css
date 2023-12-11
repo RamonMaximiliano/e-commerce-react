@@ -51,7 +51,7 @@
 }
 
 .cart-div:hover .cartImage {
-    transform: scale(1.1); 
+    transform: scale(1.02); 
     background-color: #8089f3;
 }
 .cart-div:hover {
@@ -62,14 +62,16 @@
     background-color:white;
     width: 35px;
     margin-top:6px;
+    padding:1px;
     transition: all 0.3s;
 }
 
 .clickedClass{
-    border:solid 5px white; 
+    border:solid 2px white; 
     background-color:#2b3175;
+    scale:0.9;
 }
 .clickedClass2{
     background-color:#2b3175;
-    padding:5px;
+    transform: scale(0.9); 
 }
