@@ -111,5 +111,5 @@ for the overflow hidden property to work, the parent element must be forced into
 
 .clickedProdClass{
     background-color: rgb(0, 226, 0)!important;
-    padding:9px;
+    padding:10px;
 }

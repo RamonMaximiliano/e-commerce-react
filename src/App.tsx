@@ -13,7 +13,6 @@ import { Cart } from "./components/Cart/Cart";
 import { Checkout } from "./components/Checkout/Checkout";
 import { Checkoutnope } from "./components/Checkoutnope/Checkoutnope";
 
-
 export type prod = {
   id: number;
   title: string;
@@ -119,7 +118,6 @@ TO DO:
 - Rapid color change when clicking buttons
 - Review all codes to have a better understanding
 - On contact page, provide a complete explanation of the project as well as the technologies used
-
 
 
 ----------------------------------------------------------------------------------------------

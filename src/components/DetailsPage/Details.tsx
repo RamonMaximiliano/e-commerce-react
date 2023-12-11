@@ -1,5 +1,5 @@
 import "./styles.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import MyContext from "../context/Context";
 import { prod } from "../../App";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +7,14 @@ import { useNavigate } from "react-router-dom";
 export const Details = () => {
   const { detailID, productsList, buy } = useContext(MyContext);
   const navigate = useNavigate();
+  const [clickedAdd, setClickedAdd] = useState(false);
+
+  function clickAdd() {
+    setClickedAdd(true);
+    setTimeout(() => {
+      setClickedAdd(false);
+    }, 150);
+  }
 
   const handleNavigate = () => {
     navigate("/Products");
@@ -43,15 +51,27 @@ export const Details = () => {
             <p>{prodDetail[0].description}</p>
           </div>
           <div className="detail-buttons">
-            <button className="detail-buttons-prods" onClick={handleNavigate}>
+            <button
+              className="detail-buttons-prods"
+              onClick={() => handleNavigate()}
+            >
               Back to Products
             </button>
-            <button className="detail-buttons-cart" onClick={() => buy(prodDetail[0].id)}>Add to Cart</button>
+            <button
+              className={`detail-buttons-cart ${
+                clickedAdd ? "clickedAddClass" : ""
+              }`}
+              onClick={() => {
+                buy(prodDetail[0].id);
+                clickAdd();
+                return undefined;
+              }}
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
     </div>
   );
 };
-
-

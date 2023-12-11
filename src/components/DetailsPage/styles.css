@@ -109,3 +109,8 @@
     color: white;
     background-color: rgb(99, 99, 13);
 }
+
+.clickedAddClass {
+    background-color: rgb(243, 243, 104) !important;
+    scale: 0.9;
+}
