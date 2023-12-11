@@ -88,3 +88,8 @@
     color: white;
     background-color: rgb(99, 99, 13);
 }
+
+.clickedClearClass{
+    background-color: rgb(252, 144, 144) !important;
+    padding:7px;
+}

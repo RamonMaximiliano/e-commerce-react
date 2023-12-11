@@ -9,9 +9,17 @@ export const Cart = () => {
   const { cartList, setCartList } = useContext(MyContext);
   const [totalCart, setTotalCart] = useState<number>(0);
   const navigateCheckout = useNavigate();
+  const [clickedClear, setClickedClear] = useState(false);
+
+  function clickClear() {
+    setClickedClear(true);
+    setTimeout(() => {
+      setClickedClear(false);
+    }, 250);
+  }
 
   const handleCheckoutNav = () => {
-     if (cartList.length != 0) {
+    if (cartList.length != 0) {
       navigateCheckout("/checkout");
     } else {
       navigateCheckout("/checkoutnope");
@@ -112,7 +120,16 @@ export const Cart = () => {
           </div>
 
           <div className="cart-buttons">
-            <button className="cart-buttons-clear" onClick={clearList}>
+            <button
+              className={`cart-buttons-clear ${
+                clickedClear ? "clickedClearClass" : ""
+              }`}
+              onClick={() => {
+                clickClear();
+                clearList();
+                return undefined;
+              }}
+            >
               Clear Cart
             </button>
             <button

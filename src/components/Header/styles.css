@@ -46,7 +46,8 @@
     align-items: center;
     text-align: center;
     overflow: hidden;
-    transition: all 0.5s;
+    transition: all 0.3s;
+    border: solid 5px transparent;
 }
 
 .cart-div:hover .cartImage {
@@ -60,6 +61,15 @@
 .cartImage {
     background-color:white;
     width: 35px;
-    margin-top:10px;
-    transition: all 0.5s ;
+    margin-top:6px;
+    transition: all 0.3s;
+}
+
+.clickedClass{
+    border:solid 5px white; 
+    background-color:#2b3175;
+}
+.clickedClass2{
+    background-color:#2b3175;
+    padding:5px;
 }
