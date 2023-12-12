@@ -39,7 +39,7 @@ export type quantityItem = {
   minus?: any;
   image?: string;
   rating?: {
-    rate: number;
+    rate: number | undefined;
     count: number;
   };
   delete?: (e: any) => void;
@@ -110,12 +110,11 @@ export default App;
 ----------------------------------------------------------------------------------------------
 
 TO DO:
-
+ 
 - Filtrar os produtos by category
 - Display messages when adding items to cart
 - Screensize by device 
 - New products Carrosel page 
-- Rapid color change when clicking buttons
 - Review all codes to have a better understanding
 - On contact page, provide a complete explanation of the project as well as the technologies used
 
