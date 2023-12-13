@@ -29,8 +29,7 @@ export const Release = () => {
 
   return (
     <>
-      Hello there!
-      <br />
+    <h2 className="release-title">Check our brand new products</h2>
       <div className="release-div">
         {releaseList.map((item: prod) => (
           <ItemRelease
@@ -40,6 +39,7 @@ export const Release = () => {
             description={item.description}
             category={item.category}
             image={item.image}
+            rating={item.rating}
             key={item.id}
           ></ItemRelease>
         ))}

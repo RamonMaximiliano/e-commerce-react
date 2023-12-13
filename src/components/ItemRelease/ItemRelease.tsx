@@ -5,10 +5,12 @@ import { prod } from "../../App";
 export const ItemRelease = (props:prod) => {
 
   return (
-        <>
-        Hi There
-        {props.id}
-        </>
+        <div className="itemRelease">
+        <img src={props.image}></img>
+        <h4>{props.title}</h4>
+        Customer rate: {props.rating?.rate}
+        <button className="releaseButton">Check Details</button>
+        </div>
   );
 };
 

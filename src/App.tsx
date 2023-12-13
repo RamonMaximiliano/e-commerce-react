@@ -21,7 +21,7 @@ export type prod = {
   category?: string;
   image?: string;
   rating?: {
-    rate: number;
+    rate: number | string;
     count: number;
   };
   delete?: (e: any) => void;
@@ -39,7 +39,7 @@ export type quantityItem = {
   minus?: any;
   image?: string;
   rating?: {
-    rate: number | undefined;
+    rate: number | string;
     count: number;
   };
   delete?: (e: any) => void;
@@ -113,6 +113,7 @@ TO DO:
  
 - Filtrar os produtos by category
 - Display messages when adding items to cart
+- Click effect on carousel buttons
 - Screensize by device 
 - New products Carrosel page 
 - Review all codes to have a better understanding

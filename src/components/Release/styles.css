@@ -1,9 +1,13 @@
 .release-div{
-    max-width:900px;
+    max-width:850px;
     flex-wrap: wrap;
     margin:auto;
     justify-content: space-between;
     display:flex;
-    flex-direction: column;
-    background-color: green;
+    flex-direction: row;
+}
+
+.release-title{
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
