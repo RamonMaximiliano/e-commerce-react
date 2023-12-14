@@ -14,6 +14,7 @@ export const ItemRelease = (props: prod) => {
       <img className="itemRelease-image" src={props.image}></img>
       <h4>{props.title}</h4>
       <div className="bottom-release">
+        <h4>Customer rate</h4>
         <div className="rating">
           <img className="rating-image" src={Number(props.rating?.rate) >= 1 ? yellowStart: blankStart }></img>
           <img className="rating-image" src={Number(props.rating?.rate) >= 2 ? yellowStart: blankStart }></img>

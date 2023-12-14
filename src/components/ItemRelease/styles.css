@@ -1,6 +1,6 @@
 .itemRelease{
     width:250px;
-    height: 360px;
+    height: 400px;
     background-color: white;
     display:flex;
     flex-direction: column;
@@ -52,7 +52,7 @@
     text-align: center;
     align-items: center;
     margin-bottom: 5px;
-    margin-top: 15px;
+    margin-top: 8px;
 }
 
 .rating-image{
@@ -60,3 +60,6 @@
     margin-bottom: 5px;
 }
 
+.bottom-release{
+    margin-top: 15px;
+}

@@ -117,6 +117,9 @@ TO DO:
 - Screensize by device 
 - Review all codes to have a better understanding
 - On contact page, provide a complete explanation of the project as well as the technologies used
+- When opens detail page, go to the top of the page
+
+
 
 ----------------------------------------------------------------------------------------------
 
