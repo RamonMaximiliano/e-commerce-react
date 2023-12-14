@@ -1,6 +1,6 @@
 .itemRelease{
     width:250px;
-    height: 300px;
+    height: 360px;
     background-color: white;
     display:flex;
     flex-direction: column;
@@ -11,8 +11,9 @@
     justify-content: space-between;
 }
 
-.itemRelease img{
-    max-height: 55%;
+.itemRelease-image{
+    width: 80%;
+    height: 60%;
     object-fit:contain; 
     padding:15px;
 }
@@ -27,7 +28,7 @@
     transition: all 0.2s;
     width:150px;
     height: 30px;
-    margin-bottom:8px;
+    margin-bottom:15px;
     cursor: pointer;
 }
 
@@ -35,3 +36,27 @@
     color: white;
     background-color: rgb(10, 10, 202);
 }
+
+.release-details{
+    text-decoration: none;
+}
+
+.rating{
+    width:150px;
+    margin: auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.rating-image{
+    width:15px;
+    margin-bottom: 5px;
+}
+

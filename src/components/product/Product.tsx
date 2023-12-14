@@ -10,18 +10,14 @@ export const Product = (props: prod) => {
   const { buy, setDetailID } = useContext(MyContext);
   const [clickedProd, setClickedProd] = useState(false);
 
-
-
-function prodClicked(){
-  console.log("test")
+  function prodClicked(){
   setClickedProd(true);
   setTimeout(() => {
     setClickedProd(false);
   }, 150);
 }
 
-
-  return (
+return (
     <div className="product" id={props.id.toString()}>
       <Link to="/Details" className="image-box" onClick={() => setDetailID(props.id)}>
         <img src={props.image}></img>

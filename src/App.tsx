@@ -115,10 +115,8 @@ TO DO:
 - Display messages when adding items to cart
 - Click effect on carousel buttons
 - Screensize by device 
-- New products Carrosel page 
 - Review all codes to have a better understanding
 - On contact page, provide a complete explanation of the project as well as the technologies used
-
 
 ----------------------------------------------------------------------------------------------
 

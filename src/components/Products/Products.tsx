@@ -9,14 +9,21 @@ export const Products = () => {
 
   return (
     <>
+      <div className="products-title">Products</div>
 
-<div className="products-title">Products</div>
-
-    <div className="products-view">
-      {productsList.map((item: prod) => 
-              <Product id={item.id} title={item.title} price={item.price} description={item.description} category={item.category} image={item.image} key={item.id}/>
-      )}
-    </div>
+      <div className="products-view">
+        {productsList.map((item: prod) => (
+          <Product
+            id={item.id}
+            title={item.title}
+            price={item.price}
+            description={item.description}
+            category={item.category}
+            image={item.image}
+            key={item.id}
+          />
+        ))}
+      </div>
     </>
   );
 };
