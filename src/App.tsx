@@ -12,6 +12,7 @@ import { Details } from "./components/DetailsPage/Details";
 import { Cart } from "./components/Cart/Cart";
 import { Checkout } from "./components/Checkout/Checkout";
 import { Checkoutnope } from "./components/Checkoutnope/Checkoutnope";
+import { BuyMessage } from "./components/BuyMessage/BuyMessage";
 
 export type prod = {
   id: number;
@@ -49,6 +50,7 @@ function App() {
   const [productsList, setProdList] = useState<prod[]>([]);
   const [detailID, setDetailID] = useState<number>(0);
   const [cartList, setCartList] = useState<quantityItem[]>([]);
+  const [bought, setBought] = useState(false);
 
   useEffect(() => {
     setProdList(DataBase);
@@ -71,7 +73,17 @@ function App() {
         ...newItemsWithDefaultQuantity,
       ]);
     }
+
+    itemBought();
   };
+
+  function itemBought() {
+    setBought(true);
+    setTimeout(() => {
+        setBought(false);
+    }, 2000);
+  }
+
 
   return (
     <MyContext.Provider
@@ -83,9 +95,13 @@ function App() {
         buy,
         cartList,
         setCartList,
+        bought, 
+        setBought,
+        itemBought
       }}
     >
       <div className="App">
+      <BuyMessage />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -112,20 +128,11 @@ export default App;
 TO DO:
  
 - Filtrar os produtos by category
-- Display messages when adding items to cart
 - Click effect on carousel buttons
 - Screensize by device 
 - Review all codes to have a better understanding
 - On contact page, provide a complete explanation of the project as well as the technologies used
-- When opens detail page, go to the top of the page
 
 
-
-----------------------------------------------------------------------------------------------
-
-Checking
-
-REACT E-COMMERCE:
-https://www.youtube.com/watch?v=-edmQKcOW8s&list=PLnHJACx3NwAe5XQDk9xLgym7FF8Q4FYW7&index=8&ab_channel=CodingAddict
 
 */

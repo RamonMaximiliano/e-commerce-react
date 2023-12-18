@@ -1,11 +1,11 @@
 import "./styles.css";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import MyContext from "../context/Context";
 import { prod } from "../../App";
 import { useNavigate } from "react-router-dom";
 
 export const Details = () => {
-  const { detailID, productsList, buy } = useContext(MyContext);
+  const { detailID, productsList, buy, itemBought } = useContext(MyContext);
   const navigate = useNavigate();
   const [clickedAdd, setClickedAdd] = useState(false);
 
@@ -23,6 +23,10 @@ export const Details = () => {
   let prodDetail: Array<prod> = productsList.filter((product: prod) => {
     return product.id == detailID;
   });
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="main-details">
@@ -64,6 +68,7 @@ export const Details = () => {
               onClick={() => {
                 buy(prodDetail[0].id);
                 clickAdd();
+                itemBought();
                 return undefined;
               }}
             >
