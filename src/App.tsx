@@ -130,9 +130,9 @@ TO DO:
 - Filtrar os produtos by category
 - Click effect on carousel buttons
 - Screensize by device 
+
 - Review all codes to have a better understanding
 - On contact page, provide a complete explanation of the project as well as the technologies used
-
 
 
 */

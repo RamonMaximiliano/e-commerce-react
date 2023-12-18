@@ -43,6 +43,17 @@ export const Contact = () => {
         <div>
           <h3>Hello world!</h3>
           Just a guy coding
+          <div className="education-section">
+            <p>Education:</p>
+            <ul className="education">
+              <li>
+                Bachelor's degree in Systems Analysis and Development -
+                Uniasselvi
+              </li>
+              <li>MBA in Data Science - PUC-RS</li>
+              <li>MBA in Project Management - Unisinos</li>
+            </ul>
+          </div>
         </div>
         <div>
           <img src={aiImage} className="profile-image" />
