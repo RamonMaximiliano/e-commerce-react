@@ -14,7 +14,7 @@ export const Product = (props: prod) => {
   setClickedProd(true);
   setTimeout(() => {
     setClickedProd(false);
-  }, 150);
+  }, 200);
 }
 
 return (

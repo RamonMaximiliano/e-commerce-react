@@ -71,7 +71,12 @@ export const Cart = () => {
 
   function clearList() {
     setCartList([]);
+    window.scrollTo(0, 0);
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

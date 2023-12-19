@@ -13,6 +13,8 @@ type carousel = {
 
 export const Carousel = () => {
   const [index, setIndex] = useState(0);
+  const [clickedRight, setClickedRight] = useState(false);
+  const [clickedLeft, setClickedLeft] = useState(false);
   const carouselImages: carousel[] = [
     {
       id: 1,
@@ -39,7 +41,7 @@ export const Carousel = () => {
       setIndex(0);
     } else if (index === 2) {
       setIndex(1);
-    }else if (index === 3) {
+    } else if (index === 3) {
       setIndex(2);
     }
   };
@@ -50,34 +52,47 @@ export const Carousel = () => {
       setIndex(2);
     } else if (index === 2) {
       setIndex(3);
-    }else if (index === 3) {
+    } else if (index === 3) {
       setIndex(0);
     }
   };
 
-const button0 = ()=>{
-  setIndex(0)
-}
-const button1 = ()=>{
-  setIndex(1)
-}
-const button2 = ()=>{
-  setIndex(2)
-}
-const button3 = ()=>{
-  setIndex(3)
-}
-
-let changeImage = () => {
-  setIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
-};
-
-useEffect(() => {
-  const intervalId = setInterval(changeImage, 5000);
-  return () => {
-    clearInterval(intervalId);
+  const button0 = () => {
+    setIndex(0);
   };
-}, []); 
+  const button1 = () => {
+    setIndex(1);
+  };
+  const button2 = () => {
+    setIndex(2);
+  };
+  const button3 = () => {
+    setIndex(3);
+  };
+
+  let changeImage = () => {
+    setIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
+  };
+
+  useEffect(() => {
+    const intervalId = setInterval(changeImage, 5000);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  function clickRight() {
+    setClickedRight(true);
+    setTimeout(() => {
+      setClickedRight(false);
+    }, 150);
+  }
+  function clickLeft() {
+    setClickedLeft(true);
+    setTimeout(() => {
+      setClickedLeft(false);
+    }, 150);
+  }
 
   return (
     <>
@@ -96,28 +111,68 @@ useEffect(() => {
           })}
         </div>
         <div className="arrow-buttons">
-          <div className="arrow-left" onClick={() => leftArrow()}>
+          <div
+            className={`arrow-left ${clickedLeft ? "clickedLeftClass" : ""}`}
+            onClick={() => {
+              leftArrow();
+              clickLeft();
+            }}
+          >
             <span className="material-symbols-outlined">arrow_back_ios</span>
           </div>
-          <div className="arrow-right" onClick={() => rightArrow()}>
+          <div
+            className={`arrow-right ${clickedRight ? "clickedRightClass" : ""}`}
+            onClick={() => {
+              rightArrow();
+              clickRight();
+            }}
+          >
             <span className="material-symbols-outlined">arrow_forward_ios</span>
           </div>
         </div>
       </div>
       <div className="circle-buttons">
         {/* BUTTON 1 */}
-      {index === 0 ? (<span className="material-symbols-outlined" onClick={()=>button0()}>radio_button_checked</span>
-      ) : <span className="material-symbols-outlined" onClick={()=>button0()}>radio_button_unchecked</span>}
- {/* BUTTON 2 */}
-      {index === 1 ? (<span className="material-symbols-outlined" onClick={()=>button1()}>radio_button_checked</span>
-      ) : <span className="material-symbols-outlined" onClick={()=>button1()} >radio_button_unchecked</span>}
- {/* BUTTON 3 */}
-      {index === 2 ? (<span className="material-symbols-outlined" onClick={()=>button2()}>radio_button_checked</span>
-      ) : <span className="material-symbols-outlined" onClick={()=>button2()}>radio_button_unchecked</span>}
- {/* BUTTON 4 */}
-      {index === 3 ? (<span className="material-symbols-outlined" onClick={()=>button3()}>radio_button_checked</span>
-      ) : <span className="material-symbols-outlined" onClick={()=>button3()}>radio_button_unchecked</span>}
-     </div>
+        {index === 0 ? (
+          <span className="material-symbols-outlined" onClick={() => button0()}>
+            radio_button_checked
+          </span>
+        ) : (
+          <span className="material-symbols-outlined" onClick={() => button0()}>
+            radio_button_unchecked
+          </span>
+        )}
+        {/* BUTTON 2 */}
+        {index === 1 ? (
+          <span className="material-symbols-outlined" onClick={() => button1()}>
+            radio_button_checked
+          </span>
+        ) : (
+          <span className="material-symbols-outlined" onClick={() => button1()}>
+            radio_button_unchecked
+          </span>
+        )}
+        {/* BUTTON 3 */}
+        {index === 2 ? (
+          <span className="material-symbols-outlined" onClick={() => button2()}>
+            radio_button_checked
+          </span>
+        ) : (
+          <span className="material-symbols-outlined" onClick={() => button2()}>
+            radio_button_unchecked
+          </span>
+        )}
+        {/* BUTTON 4 */}
+        {index === 3 ? (
+          <span className="material-symbols-outlined" onClick={() => button3()}>
+            radio_button_checked
+          </span>
+        ) : (
+          <span className="material-symbols-outlined" onClick={() => button3()}>
+            radio_button_unchecked
+          </span>
+        )}
+      </div>
     </>
   );
 };

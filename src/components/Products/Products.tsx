@@ -1,11 +1,16 @@
 import "./styles.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { prod } from "../../App";
 import { Product } from "../Product/Product";
 import MyContext from "../context/Context";
 
 export const Products = () => {
   const { productsList } = useContext(MyContext);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
     <>

@@ -12,6 +12,10 @@
     padding-left: 25%;
     padding-right: 30%;
     height:80px;
+    width:100%;
+    position: fixed;
+    top:0;
+    z-index: 1;
 }
 
 .menu-list {

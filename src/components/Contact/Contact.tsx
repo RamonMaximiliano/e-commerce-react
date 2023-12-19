@@ -6,7 +6,7 @@ import whatsreverse from "../../images/whatsapp-reverse.png";
 import aiImage from "../../images/aiImage.jpg";
 import whats from "../../images/whatsapp.png";
 import "./styles.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const Contact = () => {
   const [gitHub, setGitHub] = useState(false);
@@ -36,6 +36,10 @@ export const Contact = () => {
   let setIsNotHoveredW = () => {
     setWhats(false);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
     <div className="main-contact-div">

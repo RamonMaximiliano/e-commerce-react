@@ -80,10 +80,9 @@ function App() {
   function itemBought() {
     setBought(true);
     setTimeout(() => {
-        setBought(false);
+      setBought(false);
     }, 2000);
   }
-
 
   return (
     <MyContext.Provider
@@ -95,23 +94,25 @@ function App() {
         buy,
         cartList,
         setCartList,
-        bought, 
+        bought,
         setBought,
-        itemBought
+        itemBought,
       }}
     >
       <div className="App">
-      <BuyMessage />
+        <BuyMessage />
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/details" element={<Details />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/checkoutnope" element={<Checkoutnope />} />
-        </Routes>
+        <div className="main-body">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/details" element={<Details />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/checkoutnope" element={<Checkoutnope />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </MyContext.Provider>
@@ -122,17 +123,12 @@ export default App;
 
 /* 
 
-
-----------------------------------------------------------------------------------------------
-
 TO DO:
- 
-- Filtrar os produtos by category
-- Click effect on carousel buttons
-- Screensize by device 
 
+- Filtrar os produtos by category
+- Screensize by device 
+- In the cart, effect when clicking trashcan + add minus buttons
 - Review all codes to have a better understanding
 - On contact page, provide a complete explanation of the project as well as the technologies used
-
 
 */
