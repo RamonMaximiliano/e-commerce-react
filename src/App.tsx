@@ -126,8 +126,8 @@ export default App;
 TO DO:
 
 - Filtrar os produtos by category
+- Project component explaining what was done in the project
 - Screensize by device 
-- In the cart, effect when clicking trashcan + add minus buttons
 - Review all codes to have a better understanding
 - On contact page, provide a complete explanation of the project as well as the technologies used
 

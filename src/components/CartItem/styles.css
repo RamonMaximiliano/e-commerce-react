@@ -26,6 +26,10 @@
     scale: 1.2;
 }
 
+.clickedMinusClass, .clickedPlusClass{
+    scale: 1.2;
+}
+
 .prodInfo-column {
     width: 180px;
 }
@@ -35,6 +39,10 @@
     align-items: center;
     text-align: center;
     justify-content: space-between;
+}
+
+.minus-button:hover, .plus-button:hover{
+    background-color: rgb(187, 187, 187);
 }
 
 .quantity-buttons p {
@@ -47,4 +55,5 @@
     border: solid black 1px;
     font-weight: bold;
     cursor:pointer;
+    transition: all 0.2s;
 }

@@ -1,10 +1,26 @@
 import "./styles.css";
 import trash from "../../images/trash.png";
 import { quantityItem } from "../../App";
+import { useState } from "react";
 
 export const CartItem = (props: quantityItem) => {
+  const [clickedMinus, setClickedMinus] = useState(false);
+  const [clickedPlus, setClickedPlus] = useState(false);
   const itemTotal =
     props.quantity && props.price ? props.quantity * props.price : 0;
+
+  function clickMinus() {
+    setClickedMinus(true);
+    setTimeout(() => {
+      setClickedMinus(false);
+    }, 150);
+  }
+  function clickPlus() {
+    setClickedPlus(true);
+    setTimeout(() => {
+      setClickedPlus(false);
+    }, 150);
+  }
 
   return (
     <div className="prodInfo">
@@ -19,9 +35,25 @@ export const CartItem = (props: quantityItem) => {
       </div>
       <div className="prodInfo-column">
         <div className="quantity-buttons">
-        <p onClick={() => props.minus && props.minus(props.id)}>-</p>
-        <p>{props.quantity}</p>
-        <p onClick={() => props.plus && props.plus(props.id)}>+</p>
+          <p
+            className={`minus-button ${clickedMinus ? "clickedMinusClass" : ""}`}
+            onClick={() => {
+              props.minus && props.minus(props.id);
+              clickMinus();
+            }}
+          >
+            -
+          </p>
+          <p>{props.quantity}</p>
+          <p
+            className={`plus-button ${clickedPlus ? "clickedPlusClass" : ""}`}
+            onClick={() => {
+              props.plus && props.plus(props.id);
+              clickPlus();
+            }}
+          >
+            +
+          </p>
         </div>
       </div>
       <div className="prodInfo-column">
