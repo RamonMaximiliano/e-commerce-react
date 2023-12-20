@@ -6,15 +6,16 @@
 
 .main-header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: #2b3175;
     align-items: center;
     padding-left: 25%;
     padding-right: 30%;
-    height:80px;
-    width:100%;
+    min-height: 80px;
+    width: 100%;
     position: fixed;
-    top:0;
+    top: 0;
     z-index: 1;
 }
 
@@ -22,30 +23,33 @@
     display: flex;
     list-style-type: none;
     color: white;
-    width: 600px;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .menu-list li {
     padding: 5%;
     list-style: none;
-    color:white;
+    color: white;
     line-height: 15px;
 }
 
-.LinkTag{
+.LinkTag {
     list-style: none;
-    color:white;
+    color: white;
     text-decoration: none;
     transition: all 2s;
 }
-.LinkTag:hover{
+
+.LinkTag:hover {
     text-decoration: underline;
 }
 
-.cart-div{
+.cart-div {
     background-color: white;
-    width:55px;
-    height:55px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     align-items: center;
     text-align: center;
@@ -55,27 +59,42 @@
 }
 
 .cart-div:hover .cartImage {
-    transform: scale(1.02); 
+    transform: scale(1.02);
     background-color: #8089f3;
 }
+
 .cart-div:hover {
     background-color: #8089f3;
 }
 
 .cartImage {
-    background-color:white;
+    background-color: white;
     width: 35px;
-    margin-top:6px;
-    padding:1px;
+    margin-top: 6px;
+    padding: 1px;
     transition: all 0.3s;
 }
 
-.clickedClass{
-    border:solid 2px white; 
-    background-color:#2b3175;
-    scale:0.9;
+.clickedClass {
+    border: solid 2px white;
+    background-color: #2b3175;
+    scale: 0.9;
 }
-.clickedClass2{
-    background-color:#2b3175;
-    transform: scale(0.9); 
+
+.clickedClass2 {
+    background-color: #2b3175;
+    transform: scale(0.9);
+}
+
+
+@media screen and (max-width:500px) {
+
+    .menu-list li {
+        margin: 15%;
+    }
+
+    .cart-div {
+        margin: 25%;
+    }
+
 }

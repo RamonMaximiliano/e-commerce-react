@@ -16,11 +16,26 @@ export const ItemRelease = (props: prod) => {
       <div className="bottom-release">
         <h4>Customer rate</h4>
         <div className="rating">
-          <img className="rating-image" src={Number(props.rating?.rate) >= 1 ? yellowStart: blankStart }></img>
-          <img className="rating-image" src={Number(props.rating?.rate) >= 2 ? yellowStart: blankStart }></img>
-          <img className="rating-image" src={Number(props.rating?.rate) >= 3 ? yellowStart: blankStart }></img>
-          <img className="rating-image" src={Number(props.rating?.rate) >= 4 ? yellowStart: blankStart }></img>
-          <img className="rating-image" src={Number(props.rating?.rate) >= 5 ? yellowStart: blankStart }></img>
+          <img
+            className="rating-image"
+            src={Number(props.rating?.rate) >= 1 ? yellowStart : blankStart}
+          ></img>
+          <img
+            className="rating-image"
+            src={Number(props.rating?.rate) >= 2 ? yellowStart : blankStart}
+          ></img>
+          <img
+            className="rating-image"
+            src={Number(props.rating?.rate) >= 3 ? yellowStart : blankStart}
+          ></img>
+          <img
+            className="rating-image"
+            src={Number(props.rating?.rate) >= 4 ? yellowStart : blankStart}
+          ></img>
+          <img
+            className="rating-image"
+            src={Number(props.rating?.rate) >= 5 ? yellowStart : blankStart}
+          ></img>
         </div>
         <Link
           to="/Details"

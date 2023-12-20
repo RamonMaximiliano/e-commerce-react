@@ -1,25 +1,26 @@
-.icon-list{
- display:flex;
- max-width:650px;
- justify-content: space-around;
- margin-top: 100px;
+.icon-list {
+    display: flex;
+    max-width: 750px;
+    justify-content: space-around;
+    margin-top: 10%;
+    flex-wrap: wrap;
 }
 
-.icon-list img{
- max-width:50px;
- margin-top:25%;
+.icon-list img {
+    max-width: 50px;
+    margin-top: 25%;
 }
 
-.profile-image{
-    width:150px;
+.profile-image {
+    width: 150px;
     border-radius: 50%;
 }
 
 
-.main-contact-div{
+.main-contact-div {
     display: flex;
     flex-direction: column;
-    max-width:700px;
+    max-width: 750px;
     margin: auto;
     justify-content: space-between;
     margin-top: 100px;
@@ -27,43 +28,63 @@
 }
 
 
-.contact-div{
-    max-width:700px;
+.contact-div {
+    max-width: 750px;
     text-align: left;
-    display:flex;
-    justify-content:space-between;
-    padding:15px;
-    color:black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    color: black;
     font-size: 18px;
+    margin: 15px;
 }
 
 
-.contact-icon{
+.contact-icon {
     align-items: center;
     text-align: center;
-    width:100px;
+    width: 100px;
     height: 100px;
     border-radius: 10%;
-    box-shadow: #2b3175 0px 0px 10px 5px;    
+    box-shadow: #2b3175 0px 0px 10px 5px;
     border: 2px solid transparent;
     transition: all 0.2s;
 }
 
-.contact-icon:hover{
-    box-shadow: 0px 0px 0px 0px;    
+.contact-icon:hover {
+    box-shadow: 0px 0px 0px 0px;
     border: solid rgb(73, 70, 255) 2px;
     background-color: rgb(121, 123, 170)
 }
 
-.education{
+.education {
     font-size: 15px;
 }
 
-.education-section{
-    margin-top:30px;
+.education-section {
+    margin-top: 30px;
 }
-.education-section p{
+
+.education-section p {
     font-weight: bold;
     margin-bottom: 5px;
-    
+
+}
+
+@media screen and (max-width:500px) {
+    .contact-div {
+        margin: 10%;
+        margin-top: 100px;
+        padding: 10%;
+    }
+
+    .profile-image {
+        margin: 10px;
+    }
+
+    .icon-list a {
+        margin: 10px;
+    }
+
 }

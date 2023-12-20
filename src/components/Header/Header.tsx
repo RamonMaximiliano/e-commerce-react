@@ -34,8 +34,15 @@ export const Header = () => {
       </ul>
       <div>
         <Link to="/Cart" onClick={clickedCart}>
-          <div className={`cart-div ${clicked? "clickedClass":""}`} onClick={clickedCart}>
-            <img src={cartImg} onClick={clickedCart} className={`cartImage ${clicked? "clickedClass2":""}`} />
+          <div
+            className={`cart-div ${clicked ? "clickedClass" : ""}`}
+            onClick={clickedCart}
+          >
+            <img
+              src={cartImg}
+              onClick={clickedCart}
+              className={`cartImage ${clicked ? "clickedClass2" : ""}`}
+            />
           </div>
         </Link>
       </div>

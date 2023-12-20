@@ -1,21 +1,22 @@
-.itemRelease{
-    width:250px;
+.itemRelease {
+    width: 250px;
     height: 400px;
     background-color: white;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding:5px;
+    padding: 5px;
     border-radius: 15px;
     justify-content: space-between;
+    margin: 5px;
 }
 
-.itemRelease-image{
+.itemRelease-image {
     width: 80%;
     height: 60%;
-    object-fit:contain; 
-    padding:15px;
+    object-fit: contain;
+    padding: 15px;
 }
 
 .releaseButton {
@@ -26,9 +27,9 @@
     background-color: white;
     border-radius: 8px;
     transition: all 0.2s;
-    width:150px;
+    width: 150px;
     height: 30px;
-    margin-bottom:15px;
+    margin-bottom: 15px;
     cursor: pointer;
 }
 
@@ -37,14 +38,14 @@
     background-color: rgb(10, 10, 202);
 }
 
-.release-details{
+.release-details {
     text-decoration: none;
 }
 
-.rating{
-    width:150px;
+.rating {
+    width: 150px;
     margin: auto;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-left: 10px;
@@ -55,11 +56,17 @@
     margin-top: 8px;
 }
 
-.rating-image{
-    width:15px;
+.rating-image {
+    width: 15px;
     margin-bottom: 5px;
 }
 
-.bottom-release{
+.bottom-release {
     margin-top: 15px;
+}
+
+@media screen and (max-width:500px) {
+    .itemRelease {
+        margin-bottom: 10%;
+    }
 }

@@ -36,7 +36,9 @@ export const CartItem = (props: quantityItem) => {
       <div className="prodInfo-column">
         <div className="quantity-buttons">
           <p
-            className={`minus-button ${clickedMinus ? "clickedMinusClass" : ""}`}
+            className={`minus-button ${
+              clickedMinus ? "clickedMinusClass" : ""
+            }`}
             onClick={() => {
               props.minus && props.minus(props.id);
               clickMinus();

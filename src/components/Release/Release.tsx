@@ -25,11 +25,9 @@ export const Release = () => {
     });
   }, [productsList]);
 
-  console.log(releaseList);
-
   return (
     <>
-    <h2 className="release-title">Check our new products</h2>
+      <h2 className="release-title">Check our new products</h2>
       <div className="release-div">
         {releaseList.map((item: prod) => (
           <ItemRelease
@@ -48,11 +46,3 @@ export const Release = () => {
   );
 };
 
-/*
-
-
-- Create item release Component
-- If click on it, goes to the details page of it
-
-
-*/

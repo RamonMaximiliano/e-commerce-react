@@ -40,7 +40,6 @@ export const Contact = () => {
     window.scrollTo(0, 0);
   }, []);
 
-
   return (
     <div className="main-contact-div">
       <div className="contact-div">

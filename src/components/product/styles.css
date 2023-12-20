@@ -103,13 +103,21 @@ for the overflow hidden property to work, the parent element must be forced into
     border-radius: 10px 0 0 0;
     transform: translate(100%);
     transition: all 0.2s;
-/*     border: 2px solid transparent; */
- }
+    /*     border: 2px solid transparent; */
+}
+
 .cartIcon:hover {
     background-color: #808af8;
 }
 
-.clickedProdClass{
-    background-color: rgb(0, 226, 0)!important;
-    padding:10px;
+.clickedProdClass {
+    background-color: rgb(0, 226, 0) !important;
+    padding: 10px;
+}
+
+@media screen and (max-width:500px) {
+
+    .product {
+        margin: 8%;
+    }
 }
