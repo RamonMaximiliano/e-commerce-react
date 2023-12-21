@@ -69,4 +69,15 @@
         justify-content: center;
         margin: 10px;
     }
+
+    .single-price{
+        display: none;
+    }
+
+    .prodInfo{
+        flex-direction: column;
+        height: 350px;
+        justify-content:space-around;
+    }
+
 }

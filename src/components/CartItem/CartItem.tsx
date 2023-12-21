@@ -30,7 +30,7 @@ export const CartItem = (props: quantityItem) => {
       <div className="prodInfo-column">
         <p>{props.title}</p>
       </div>
-      <div className="prodInfo-column">
+      <div className="prodInfo-column single-price">
         <p>$ {props.price}</p>
       </div>
       <div className="prodInfo-column">
