@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/e-commerce-react/static/css/main.8fe86944.css",
+    "main.js": "/e-commerce-react/static/js/main.20aff46d.js",
+    "static/js/787.8f360ba4.chunk.js": "/e-commerce-react/static/js/787.8f360ba4.chunk.js",
+    "static/media/Thanks.png": "/e-commerce-react/static/media/Thanks.a19ed5a9cfaff78306b3.png",
+    "static/media/aiImage.jpg": "/e-commerce-react/static/media/aiImage.35b81e6de2a694e640ec.jpg",
+    "static/media/image2.jpg": "/e-commerce-react/static/media/image2.c5bb38c87a4f94e25a84.jpg",
+    "static/media/image3.jpg": "/e-commerce-react/static/media/image3.068b885fb0aaf477a886.jpg",
+    "static/media/image4.jpg": "/e-commerce-react/static/media/image4.33d82ecd54813a69c517.jpg",
+    "static/media/image1.jpg": "/e-commerce-react/static/media/image1.dc31582d902b645d866e.jpg",
+    "static/media/Nope.jpg": "/e-commerce-react/static/media/Nope.7f576021ecef7c7f0ad6.jpg",
+    "static/media/whatsapp-reverse.png": "/e-commerce-react/static/media/whatsapp-reverse.662a7b8177cd31c83f94.png",
+    "static/media/github-reverse.png": "/e-commerce-react/static/media/github-reverse.c02c6f6aa9f6ae72c279.png",
+    "static/media/hollywood-star-blank.png": "/e-commerce-react/static/media/hollywood-star-blank.6ac72c9670e0c6cefea9.png",
+    "static/media/check.png": "/e-commerce-react/static/media/check.0e163e83492acb677d72.png",
+    "static/media/whatsapp.png": "/e-commerce-react/static/media/whatsapp.29dd41c9009c90f690c6.png",
+    "static/media/linkedin-reverse.png": "/e-commerce-react/static/media/linkedin-reverse.77ede680ac31c335843c.png",
+    "static/media/hollywood-star-yellow.png": "/e-commerce-react/static/media/hollywood-star-yellow.9b1044d61d7977b0837d.png",
+    "static/media/github.png": "/e-commerce-react/static/media/github.22cfdd1cba253783ce51.png",
+    "static/media/linkedin.png": "/e-commerce-react/static/media/linkedin.032cf8a63be2f0f4d425.png",
+    "index.html": "/e-commerce-react/index.html",
+    "main.8fe86944.css.map": "/e-commerce-react/static/css/main.8fe86944.css.map",
+    "main.20aff46d.js.map": "/e-commerce-react/static/js/main.20aff46d.js.map",
+    "787.8f360ba4.chunk.js.map": "/e-commerce-react/static/js/787.8f360ba4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8fe86944.css",
+    "static/js/main.20aff46d.js"
+  ]
+}
