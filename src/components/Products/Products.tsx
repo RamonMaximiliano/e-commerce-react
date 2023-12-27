@@ -11,7 +11,6 @@ export const Products = () => {
     window.scrollTo(0, 0);
   }, []);
 
-
   return (
     <>
       <div className="products-title">Products</div>

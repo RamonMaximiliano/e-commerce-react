@@ -120,14 +120,3 @@ function App() {
 }
 
 export default App;
-
-/* 
-
-TO DO:
-
-- Continue Code checking from Cart Item to bottom
-- Filtrar os produtos by category
-- Project component explaining what was done in the project, provide a complete explanation of the project as well as the technologies used
-
-
-*/
