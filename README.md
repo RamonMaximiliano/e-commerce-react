@@ -13,3 +13,5 @@ A simple e-commerce to practice React, using an API: https://fakestoreapi.com/
 APP:
 https://ramonmaximiliano.github.io/e-commerce-react/
 
+![My Image](interface.png)
+
