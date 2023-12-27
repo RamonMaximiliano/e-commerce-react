@@ -9,7 +9,7 @@ export const BuyMessage = () => {
   return (
     <>
       <div className={`item-bought ${bought ? "item-bought-message" : ""}`}>
-        <img className="check-icon" src={check}></img>
+        <img className="check-icon" src={check} alt="Check Icon"></img>
         <p> Item added!</p>
       </div>
     </>

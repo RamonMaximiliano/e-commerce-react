@@ -8,7 +8,7 @@ type carousel = {
 export const CarouselItem = (props: carousel) => {
   return (
     <>
-      <img className="main-carousel-item" src={props.image} />
+      <img className="main-carousel-item" src={props.image} alt="Carousel Item"/>
     </>
   );
 };

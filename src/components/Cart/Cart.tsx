@@ -50,15 +50,13 @@ export const Cart = () => {
   function minus(e: number) {
     let minusList = cartList.map((item: quantityItem) => {
       if (item.id === e) {
-        // Check if 'quantity' is defined before incrementing
         if (item.quantity !== undefined && item.quantity > 1) {
           item.quantity--;
         }
       }
-      return item; // Return the modified item
+      return item; 
     });
 
-    // Update cartList with the modified items
     setCartList(minusList);
   }
 

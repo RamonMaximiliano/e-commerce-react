@@ -132,7 +132,7 @@ export const Carousel = () => {
         </div>
       </div>
       <div className="circle-buttons">
-        {/* BUTTON 1 */}
+     
         {index === 0 ? (
           <span className="material-symbols-outlined" onClick={() => button0()}>
             radio_button_checked
@@ -142,7 +142,7 @@ export const Carousel = () => {
             radio_button_unchecked
           </span>
         )}
-        {/* BUTTON 2 */}
+
         {index === 1 ? (
           <span className="material-symbols-outlined" onClick={() => button1()}>
             radio_button_checked
@@ -152,7 +152,7 @@ export const Carousel = () => {
             radio_button_unchecked
           </span>
         )}
-        {/* BUTTON 3 */}
+  
         {index === 2 ? (
           <span className="material-symbols-outlined" onClick={() => button2()}>
             radio_button_checked
@@ -162,7 +162,7 @@ export const Carousel = () => {
             radio_button_unchecked
           </span>
         )}
-        {/* BUTTON 4 */}
+   
         {index === 3 ? (
           <span className="material-symbols-outlined" onClick={() => button3()}>
             radio_button_checked

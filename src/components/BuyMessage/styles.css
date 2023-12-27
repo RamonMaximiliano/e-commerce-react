@@ -4,7 +4,6 @@
     margin-top: -250px;
     left:45%;
     background-color: rgb(66, 221, 66);
-    position: absolute;
     transition: all 0.5s ease-in;
     border-radius: 0px 0px 5px 5px;
     display:flex;
