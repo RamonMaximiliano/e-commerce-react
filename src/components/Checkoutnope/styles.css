@@ -21,3 +21,17 @@
 .message-div h3{
 color:rgb(197, 0, 0);
 }
+
+
+@media screen and (max-width:500px) {
+    .main-checkout-nope {
+        margin-top: 180px;
+        flex-direction: column;
+    }
+    .message-div{
+        text-align: center;
+    }
+    .main-checkout-nope img {
+        max-width: 80%;
+    }
+}    

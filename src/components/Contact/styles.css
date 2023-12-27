@@ -86,5 +86,9 @@
     .icon-list a {
         margin: 10px;
     }
+    .icon-list {
+        flex-direction: column;
+        margin: auto;
+    }
 
 }

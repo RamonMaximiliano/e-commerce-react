@@ -11,3 +11,10 @@
     font-weight: bold;
     margin-top: 20px;
 }
+
+
+@media screen and (max-width:500px) {
+    .products-title{
+        margin-top: 250px;
+    }
+}

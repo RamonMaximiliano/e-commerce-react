@@ -9,3 +9,13 @@
     margin: auto;
     border-radius: 2%;
 }
+
+
+@media screen and (max-width:500px) {
+    .main-checkout {
+        margin-top: 250px;
+    }
+    .main-checkout img {
+        max-width: 95%;
+    }
+}    

@@ -126,16 +126,8 @@ export default App;
 TO DO:
 
 - Filtrar os produtos by category
-- Project component explaining what was done in the project
-
-- Screensize by device:
-FALTA:
-(Buy message)
-(Detail screen)
-(Thank you screen)
-(Sorry screen)
-
+- Project component explaining what was done in the project, provide a complete explanation of the project as well as the technologies used
 - Review all codes to have a better understanding
-- On contact page, provide a complete explanation of the project as well as the technologies used
+
 
 */

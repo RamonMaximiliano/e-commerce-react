@@ -73,3 +73,15 @@
     justify-content: space-between;
     opacity: 0.8;
 }
+
+
+
+@media screen and (max-width:500px) {
+    .home-title {
+        margin-top: 180px;
+        margin-bottom: -120px;
+    }
+    .circle-buttons {
+        margin-top: -100px;
+    }
+}    
