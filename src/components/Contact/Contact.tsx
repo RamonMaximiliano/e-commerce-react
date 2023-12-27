@@ -74,7 +74,7 @@ export const Contact = () => {
           <img src={gitHub ? githubreverse : github} />
         </a>
         <a
-          href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+          href="https://www.linkedin.com/in/ramon-m-b75a9676"
           target="_blank"
           className="contact-icon"
           onMouseEnter={setIsHoveredLink}
