@@ -122,12 +122,8 @@ function App() {
 export default App;
 
 
-
-/* 
-
-Create on contact:
-- Email icon
-- Download resume
-- Portfolio icon 
+/*
+- Fonte titulos
+- Button go to top
 
 */

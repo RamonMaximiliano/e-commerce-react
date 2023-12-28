@@ -1,10 +1,10 @@
-import githubreverse from "../../images/github-reverse.png";
+import githubreverse from "../../images/github-new.png";
 import github from "../../images/github.png";
-import linkedinreverse from "../../images/linkedin-reverse.png";
-import linkedin from "../../images/linkedin.png";
-import whatsreverse from "../../images/whatsapp-reverse.png";
+import linkedinreverse from "../../images/linkedin-white-new.png";
+import linkedin from "../../images/linkedin-black-new.png";
+import whatsreverse from "../../images/whatsappwhite-new.png";
 import aiImage from "../../images/aiImage.jpg";
-import whats from "../../images/whatsapp.png";
+import whats from "../../images/whatsappblack-new.png";
 import portfolioimage from "../../images/rocket.png"
 import portfolioreverse from "../../images/rocketblack.png"
 import mail from "../../images/mail.png"
@@ -87,7 +87,7 @@ export const Contact = () => {
           </div>
         </div>
         <div>
-          <img src={aiImage} className="profile-image" />
+          <img src={aiImage} className="profile-image" title="This image was created with AI"/>
         </div>
       </div>
 
@@ -99,6 +99,7 @@ export const Contact = () => {
           className="contact-icon"
           onMouseEnter={setIsHovered}
           onMouseLeave={setIsNotHovered}
+          title="Check my GitHub"
         >
           <img src={gitHub ? githubreverse : github} />
         </a>
@@ -108,6 +109,7 @@ export const Contact = () => {
           className="contact-icon"
           onMouseEnter={setIsHoveredLink}
           onMouseLeave={setIsNotHoveredLink}
+          title="Check my Linkedin"
         >
           <img src={linkedins ? linkedinreverse : linkedin} />
         </a>
@@ -117,6 +119,7 @@ export const Contact = () => {
           className="contact-icon"
           onMouseEnter={setIsHoveredW}
           onMouseLeave={setIsNotHoveredW}
+          title="Talk to me"
         >
           <img src={whatss ? whatsreverse : whats} />
         </a>
@@ -128,6 +131,7 @@ export const Contact = () => {
           className="contact-icon"
           onMouseEnter={setIsHoveredportfolio}
           onMouseLeave={setIsNotHoveredportfolio}
+          title="Check my Portfolio"
         >
           <img src={portfolio ? portfolioimage : portfolioreverse} />
         </a>
@@ -137,6 +141,7 @@ export const Contact = () => {
           className="contact-icon"
           onMouseEnter={setIsHoveredMail}
           onMouseLeave={setIsNotHoveredMail}
+          title="Send me an e-mail"
         >
           <img src={mailstate ? mail : mailblack} />
         </a>
@@ -146,6 +151,7 @@ export const Contact = () => {
           className="contact-icon"
           onMouseEnter={setIsHoveredResume}
           onMouseLeave={setIsNotHoveredResume}
+          title="Check my Resume"
         >
           <img src={resumestate ? resume : resumeblack} />
         </a>

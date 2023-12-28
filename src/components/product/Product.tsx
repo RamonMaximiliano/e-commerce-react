@@ -18,7 +18,7 @@ export const Product = (props: prod) => {
 }
 
 return (
-    <div className="product" id={props.id.toString()}>
+    <div className="product" id={props.id.toString()} title="Click to check details of this product">
       <Link to="/Details" className="image-box" onClick={() => setDetailID(props.id)}>
         <img src={props.image}></img>
       </Link>
