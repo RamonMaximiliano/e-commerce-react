@@ -40,7 +40,6 @@
     margin: 15px;
 }
 
-
 .contact-icon {
     align-items: center;
     text-align: center;
@@ -72,6 +71,16 @@
 
 }
 
+.main-icon-grid{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 10px;
+     justify-content: space-between;
+}
+
+
 @media screen and (max-width:500px) {
     .contact-div {
         margin: 10%;
@@ -84,7 +93,7 @@
     }
 
     .icon-list a {
-        margin: 10px;
+        margin: 15px;
     }
     .icon-list {
         flex-direction: column;
