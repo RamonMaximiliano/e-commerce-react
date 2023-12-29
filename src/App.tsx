@@ -13,6 +13,7 @@ import { Cart } from "./components/Cart/Cart";
 import { Checkout } from "./components/Checkout/Checkout";
 import { Checkoutnope } from "./components/Checkoutnope/Checkoutnope";
 import { BuyMessage } from "./components/BuyMessage/BuyMessage";
+import arrowtop from "../src/images/arrow-top.png"
 
 export type prod = {
   id: number;
@@ -51,6 +52,7 @@ function App() {
   const [detailID, setDetailID] = useState<number>(0);
   const [cartList, setCartList] = useState<quantityItem[]>([]);
   const [bought, setBought] = useState(false);
+  const [showTop, setShowTop] = useState(false)
 
   useEffect(() => {
     setProdList(DataBase);
@@ -84,6 +86,15 @@ function App() {
     }, 2000);
   }
 
+  window.onscroll = function() {scrolling()};
+    function scrolling() {
+      if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+        setShowTop(true)
+      } else {
+        setShowTop(false)
+      }
+    }
+
   return (
     <MyContext.Provider
       value={{
@@ -113,6 +124,9 @@ function App() {
             <Route path="/checkoutnope" element={<Checkoutnope />} />
           </Routes>
         </div>
+        <div onClick={() => {window.scrollTo(0, 0);}} className={`scroll-button ${showTop? "scrolled" : ""}`}>
+        <span className="material-symbols-outlined">arrow_upward</span>
+          </div>
         <Footer />
       </div>
     </MyContext.Provider>
@@ -124,6 +138,5 @@ export default App;
 
 /*
 - Fonte titulos
-- Button go to top
 
 */

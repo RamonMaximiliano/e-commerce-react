@@ -14,7 +14,7 @@
     width: 200px;
     margin: auto;
     padding-top:15px;
-    padding-bottom:30px;
+    padding-bottom:12px;
     justify-content: space-between;
     transition: all 1s;
 }
@@ -24,4 +24,10 @@
     cursor:pointer;
     width:40px;
     transition: all 1s;
+}
+
+
+.footer-created{
+    color:white;
+    padding-bottom:30px;
 }

@@ -52,3 +52,45 @@ body{
 .main-body{
   margin-top: 120px;
 }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.scroll-button{
+  display:flex;
+ position:fixed;
+transition: all 0.2s ease-in;
+width:50px;
+height:50px;
+background-color: white;
+opacity:0.5;
+cursor: pointer;
+align-items: center;
+text-align: center;
+border-radius: 50%;
+padding-top: 2px;
+padding-left: 13px;
+z-index: 2;
+top:50%;
+margin-left: 100%;
+}
+
+.scroll-button:hover{
+opacity:1;
+scale:1.2;
+}
+
+.scrolled{
+  margin-left: 90%;
+}
+
+@media screen and (max-width:500px) {
+  .scrolled{
+    margin-left: 80%;
+  }
+}

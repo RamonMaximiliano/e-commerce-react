@@ -66,6 +66,7 @@ export const Footer = () => {
           />
         </a>
       </div>
+      <p className="footer-created">Created by Ramon</p>
     </div>
   );
 };
