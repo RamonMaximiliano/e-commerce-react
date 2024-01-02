@@ -97,7 +97,7 @@ export const Carousel = () => {
   return (
     <>
       <div className="home-title">
-        <h2>Hello there!</h2>
+        <h2 className="main-page-title">Hello there!</h2>
       </div>
       <div className="main-carousel-div">
         <div

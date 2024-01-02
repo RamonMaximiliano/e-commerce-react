@@ -135,8 +135,3 @@ function App() {
 
 export default App;
 
-
-/*
-- Fonte titulos
-
-*/

@@ -71,15 +71,19 @@
 
 }
 
-.main-icon-grid{
-    display:flex;
+.main-icon-grid {
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 10px;
-     justify-content: space-between;
+    justify-content: space-between;
 }
 
+.hello-world {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+}
 
 @media screen and (max-width:500px) {
     .contact-div {
@@ -95,6 +99,7 @@
     .icon-list a {
         margin: 15px;
     }
+
     .icon-list {
         flex-direction: column;
         margin: auto;

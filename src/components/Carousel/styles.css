@@ -74,6 +74,10 @@
     opacity: 0.8;
 }
 
+.main-page-title{
+font-family: 'Permanent Marker', cursive;
+font-size: 30px;
+}
 
 
 @media screen and (max-width:500px) {

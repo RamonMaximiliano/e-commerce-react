@@ -72,7 +72,7 @@ export const Contact = () => {
     <div className="main-contact-div">
       <div className="contact-div">
         <div>
-          <h3>Hello world!</h3>
+          <h3 className="hello-world">Hello world!</h3>
           Just a guy coding
           <div className="education-section">
             <p>Education:</p>
