@@ -1,10 +1,26 @@
 # E-Commerce-React
 
-## Html - Css - JavaScript - React - React Router - React Hooks - Context API - Fake Store API
+## Html - Css - JavaScript - React - TypeScript - React Router - React Hooks - Context API - Fake Store API
 
 ## Português:
 
-Um e-commerce simples para praticar React, usando a API: https://fakestoreapi.com/
+##Projeto de E-Commerce com React
+Um projeto simples de e-commerce desenvolvido para praticar o React, apresentando páginas de produtos, um carrinho de compras, um carrossel (sem o uso de bibliotecas externas) e uma página de contato.
+
+#Recursos:
+- Páginas de Produtos: Explore uma variedade de produtos obtidos da Fake Store API.
+- Carrinho de Compras: Adicione produtos ao seu carrinho e gerencie sua lista de compras.
+- Carrossel: Um carrossel personalizado para uma experiência de usuário aprimorada.
+- Página de Contato: Entre em contato com o desenvolvedor por meio da página de contato.
+
+#Tecnologias Utilizadas:
+React
+Typescript
+React Router
+React Hooks
+Context API
+Confira o projeto aqui:
+https://ramonmaximiliano.github.io/e-commerce-react/
 
 ## English:
 
@@ -18,11 +34,11 @@ A simple e-commerce project developed to practice React, featuring product pages
 - Contact Page: Get in touch with the developer via the contact page.
 
 #Technologies Used:
-- React: Frontend library for building user interfaces.
-- Typescript: Adds static typing to JavaScript for improved code quality.
-- React Router: Enables navigation and routing in the React application.
-- React Hooks: Use state and other React features without writing a class.
-- Context API: Manage state across the application without prop drilling.
+- React
+- Typescript
+- React Router
+- React Hooks
+- Context API
 
 Check the project here:
 https://ramonmaximiliano.github.io/e-commerce-react/
