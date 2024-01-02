@@ -1,5 +1,4 @@
 # E-Commerce-React
-
 ## Html - Css - JavaScript - React - TypeScript - React Router - React Hooks - Context API - Fake Store API
 
 # Português:
@@ -13,11 +12,12 @@ Um projeto simples de e-commerce desenvolvido para praticar o React, apresentand
 - Página de Contato: Entre em contato com o desenvolvedor por meio da página de contato.
 
 ## Tecnologias Utilizadas:
-React
-Typescript
-React Router
-React Hooks
-Context API
+- React
+- Typescript
+- React Router
+- React Hooks
+- Context API
+
 Confira o projeto aqui:
 https://ramonmaximiliano.github.io/e-commerce-react/
 
